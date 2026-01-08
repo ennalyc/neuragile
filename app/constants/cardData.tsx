@@ -1,4 +1,6 @@
-export const data = [
+import { Card } from "../types/card";
+
+export const data: Card[] = [
     {
         id: 1,
         category: "Práticas Ágeis",
