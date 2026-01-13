@@ -12,3 +12,7 @@ export type Card = {
     front: CardFront[],
     back: string,
 }
+
+export type CardSize = 'small' | 'medium' | 'big' | 'large';
+
+export type SmallCardSize = 'xs' | 'small';

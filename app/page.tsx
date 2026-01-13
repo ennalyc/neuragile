@@ -1,10 +1,8 @@
-import Image from "next/image";
-import LargeCard from "./components/LargeCard";
-import { data } from "./constants/cardData";
+import ExploreCardsSection from "./components/sections/ExploreCardsSection";
 export default function Home() {
   return (
-   <div className="flex flex-wrap">
-      Hi
+   <div className="px-24">
+    <ExploreCardsSection/>
    </div>
   );
 }
