@@ -31,7 +31,7 @@ const CustomInput = () => {
                 onChange={handleChange} 
                 value={typing} 
                 type="text" 
-                placeholder="Pesquise por cards..." 
+                placeholder="Search for cards..." 
                 className="w-3xl h-10 bg-neutral-100 border rounded-sm text-neutral-400 text-sm px-4 border-neutral-200"
             />
         </form>

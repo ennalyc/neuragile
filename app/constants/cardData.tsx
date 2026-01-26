@@ -3,478 +3,478 @@ import { Card } from "../types/card";
 export const data: Card[] = [
     {
         id: 1,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "01",
-                title: "Pequenos Passos",
-                text: "Divida tarefas maiores em partes menores e concretas para uma maior clareza e capacidade de gerenciamento e ou/execução, incluindo um cronograma com prazos para conclusão dessas tarefas menores.",
+                title: "Baby Steps",
+                text: "Break down larger tasks into smaller and concrete units, enhancing clarity, manageability, and execution. Use a schedule with deadlines for these smaller milestones to support progress monitoring.",
             },
         ],
-        back: "Pessoas neurodivergentes, sobretudo com TDAH, podem apresentar dificuldades em funções executivas como planejamento, organização e memória de trabalho, como também em ações como iniciar tarefas e estimar o tempo. Por isso, pode ser importante a utilização de ferramentas que auxiliem a organizar e priorizar tarefas, tornando mais claro por onde começar.",
+        back: "When faced with a large workload or long-term deadlines, individuals with Autism Spectrum Disorder (ASD) may experience cognitive overload, while individuals with ADHD often present difficulties with time perception and working memory. This combination increases vulnerability to procrastination, making it necessary to adopt strategies such as intermediate deliverables.",
     },
     {
         id: 2,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "02",
-                title: "Dividir para Conquistar",
-                text: "Para tornar uma Sprint Planning mais inclusiva, certifique-se de que a quebra de tarefas é clara e explícita para pessoas colaboradoras neurodivergentes, com definições claras do que é considerado como uma parte concluída.",
-            },
+                title: "Divide and Conquer",
+                text: "To make Sprint Planning more inclusive, ensure that task breakdowns are explicit and clear for neurodivergent team members, with well-defined criteria of what counts as a completed part."
+            
+            }
         ],
-        back: "Pessoas neurodivergentes, sobretudo com TDAH, podem apresentar dificuldades em funções executivas como planejamento organização e memória de trabalho, como também em ações como estimar o tempo ou concluir tarefas. Por isso, pode ser importante a utilização de estratégias que auxiliam a manter o foco nas tarefas, tornando mais fácil a sua conclusão.",
-    },
+        back: "A common neurodivergent characteristic is the challenge of relating parts to the whole. For example, individuals with ASD tend to hyperfocus on a single detail within a complex image, while individuals with ADHD may struggle to filter details and perceive everything simultaneously. This creates the need for consistent reinforcements to establish clear connections between subdivided tasks and the overall goal."},
     {
         id: 3,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH", "TEA"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD", "ASD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "03",
-                title: "Teste Primeiro",
-                text: "Considere a aplicação do método ágil TDD (Test Driven Development), pois com ele é necessário escrever testes antes mesmo de uma funcionalidade ser implementada, forçando a quebra de tarefas da Sprint em subtarefas menores.",
+                title: "Test First",
+                text: "Consider adopting Test-Driven Development (TDD), since it requires writing tests before implementing a functionality, thus naturally enforcing task decomposition into smaller, manageable subtasks during the Sprint."
             },
         ],
-        back: "apresentam diferenças no processamento de estímulos ao lidar com tarefas que exigem as funções executivas de estratégia, planejamento e memória de trabalho, bem como na forma como lidam com o estresse.",
+        back: "Difficulties in relating parts to the whole can hinder the ability of neurodivergent individuals to decompose a feature implementation into smaller tasks. When faced with decomposition challenges, they may develop anxiety, provide imprecise estimations, or postpone task initiation."
     },
     {
         id: 4,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH", "TEA"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD", "ASD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "04",
-                title: "Descarga Mental",
-                text: "Para auxiliar a visualização do trabalho a ser executado, inicie anotando todas as tarefas necessárias em qualquer ordem, utilizando notas escritas, por áudio ou desenhadas, ao seu gosto. Escrever tudo numa lista pode ajudar a reduzir a carga mental ou auxiliar nos desafios de memória.",
+                title: "Mental Offload",
+                text: "To support visualization of upcoming work, start by writing down all tasks in any order, whether through written notes, audio recordings, or sketches. Listing everything externally can help reduce cognitive load and assist with memory challenges."
             },
         ],
-        back: "A dificuldade em relacionar as partes e o todo pode prejudicar a capacidade de pessoas neurodivergentes de decompor a implementação de uma feature em atividades menores. Diante dessa dificuldade de decomposição, pessoas colaboradoras neurodivergentes podem desenvolver crises de ansiedade, dar estimativas imprecisas ou adiar o início da tarefa.",
+        back: "Neurodivergent individuals with ASD and ADHD may be more susceptible to cognitive fatigue and sensory overload, due to differences in processing stimuli when engaging in activities that demand executive functions such as planning, strategy, and working memory, as well as in how they manage stress."
     },
     {
         id: 5,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH", "TEA"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD", "ASD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "05",
-                title: "Lote Focado",
-                text: "Agrupe tarefas semelhantes da Sprint em “lotes” para evitar troca constante de contexto de trabalho, ou reserve mais tempo ininterrupto numa tarefa para alavancar o hiperfoco de pessoas colaboradoras neurodivergentes, auxiliando a sua conclusão."
+                title: "Focused Batch",
+                text: "Group similar Sprint tasks into “batches” to to reduce frequent context switching, or allow uninterrupted time blocks on a single task to leverage hyperfocus in neurodivergent team members, supporting task completion."
             }
             ],
-        back: "Uma característica neurodivergente é a dificuldade em relacionar as partes e o todo. Por exemplo, diante de uma imagem com vários detalhes, a pessoa com TEA tende a perceber apenas uma parte do todo (detalhe), enquanto a pessoa com TDAH tende a  não conseguir filtrar as partes e percebe o todo ao mesmo tempo. Por isso, há a necessidade de reforçadores consistentes para que seja possível estabelecer vínculos claros entre as divisões das partes e o todo.",
+        back: "Neurodivergent individuals, especially those with ADHD, may experience difficulties with executive functions such as planning, organization, and working memory, as well as challenges in estimating time or completing tasks. Strategies that help sustain focus can therefore improve task completion."
     },
     {
         id: 6,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH", "TEA"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD", "ASD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "06",
-                title: "Matriz 2X2",
-                text: "Agrupe tarefas semelhantes da Sprint em “lotes” para evitar troca constante de contexto de trabalho, ou reserve mais tempo ininterrupto numa tarefa para alavancar o hiperfoco de pessoas colaboradoras neurodivergentes, auxiliando a sua conclusão."
+                title: "2x2 Matrix",
+                text: "Improve prioritization using techniques such as the Eisenhower Matrix or a 2×2 Matrix (e.g., -Urgent/+Urgent and -Important/+Important), MoSCoW (Must have, Should have, Could have, Won’t have), among others."
             }
             ],
-        back: "Melhore a identificação das prioridades utilizando técnicas como Matriz de Eisenhower ou Matriz 2x2 (com por exemplo, -Urgente / +Urgente, e -Importante / +Importante), MoSCoW (Must have, Should have, Could have e Won't have), entre outras.",
+        back: "Neurodivergent individuals, particularly those with ADHD, may face challenges in planning, organization, working memory, as well as initiating tasks and estimating time. Tools that facilitate task organization and prioritization can improve clarity on where to begin."
     },
     {
         id: 7,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH", "TEA"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD", "ASD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "07",
-                title: "Missão Monótona",
-                text: "Na distribuição de tarefas numa Sprint Planning, identifique explicitamente e destaque tarefas tediosas e repetitivas, pois algumas pessoas colaboradoras neurodivergentes podem ou ter dificuldade em concluílas, ou ter preferência por fazer tais tarefas."
+                title: "Monotony Mission",
+                text: "During Sprint Planning, explicitly identify and highlight tedious or repetitive tasks. Some neurodivergent team members may struggle to complete them, while others may actually prefer executing them."
             }
             ],
-        back: "Em estudo recente com pessoas neurodivergentes, a cerimônia Daily foi comumente apontada um gatilho de ansiedade por pessoas com TEA e/ou TDAH. Apesar da rotina ser um fator positivo para pessoas com TEA, a dificuldade de socialização e comunicação sobressai como fator detrator da daily, bem como, no caso de pessoas com TDAH, a dificuldade na gestão de tempo e manutenção do foco na produção de tarefas devido à elevação da ansiedade antes da daily, requerendo alternativas para o modelo usual de cerimônia.",
+        back: "Individuals with ASD may exhibit a preference for repetitive tasks due to cognitive rigidity, while those with ADHD often present lower baseline dopamine levels, which can impair motivation to initiate or complete monotonous tasks lacking immediate reward. These conditions may trigger procrastination. Explicit identification of such tasks can therefore assist in their fair allocation."
     },
     {
         id: 8,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH", "TEA"],
-        relatedCP: ["Organização", "Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ADHD", "ASD"],
+        relatedCP: ["Arrangement", "Planning"],
         front: [
             {
                 cardNum: "08",
-                title: "Estimativa Real",
-                text: "Ajude a ajustar estimativas de entrega de pessoas colaboradoras neurodivergentes, pois a visualização/formulação de estimativas realistas pode ser um ponto de dificuldade."
+                title: "Realistic Estimate",
+                text: "Provide support in adjusting delivery estimates for neurodivergent team members, as formulating realistic estimations can be a significant challenge."
             }
             ],
-        back: "Cerimônias ágeis comumente envolvem apresentações orais e visuais simultaneamente, assim como um maior número de pessoas (como equipe técnica e clientes). Pessoas com TDAH podem apresentar desafios na chamada atenção dividida a dois estímulos diferentes, enquanto pessoas com TEA podem apresentar dificuldades na comunicação e interação social. Ambas as situações requerem um alto esforço mental para o controle funcional, podendo acarretar em fadiga cognitiva.",
+        back: "Neurodivergent individuals, especially those with ASD, may approach planning with a different logic, while those with ADHD often struggle with attentional control and time perception. In both cases, this may result in difficulties in estimating, monitoring, or managing task duration."
     },
     {
         id: 9,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA"],
-        relatedCP: ["Organização"],
+        category: "Agile Practices",
+        relatedND: ["ASD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "09",
-                title: "Função Flexível",
-                text: "Ajude a ajustar estimativas de entrega de pessoas colaboradoras neurodivergentes, pois a visualização/formulação de estimativas realistas pode ser um ponto de dificuldade."
+                title: "Flexible Roles",
+                text: "Define roles and responsibilities clearly within the team, but allow neurodivergent team members to switch roles when these tasks become a source of stress."
             }
             ],
-        back: "Para muitas pessoas neurodivergentes, sobretudo com TEA devido à rigidez cognitiva, rotina, organização e previsibilidade são fatores de contribuem para o bem estar nas atividades diárias. Assim, uma rotina clara e previsível pode reduzir a ansiedade e o estresse, além de fornecer uma sensação de segurança e estabilidade, contribuindo também para o desenvolvimento da autonomia na execução de tarefas.",
+        back: "Neurodivergent individuals, particularly those with ASD, may face difficulties in communication and social interaction, which can lead to anxiety when performing tasks that require these skills, such as face-to-face client meetings or sending external communications."
     },
     {
         id: 10,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ASD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "10",
-                title: "Rotina Estável",
-                text: "Realize poucas mudanças e mantenha rotinas, horários de reuniões e cerimônias, pois um Time Ágil pode ser um local onde pessoas colaboradoras neurodivergentes encontram estabilidade, promovendo conforto psicológico e uma melhor performance."
+                title: "Stable Routine",
+                text: "Limit unnecessary changes and maintain stable routines, including meeting schedules and agile ceremonies. An Agile Team can serve as an environment of psychological safety and stability, enhancing both comfort and performance for neurodivergent team members."
             }
             ],
-        back: "Pessoas neurodivergentes, sobretudo aquelas com TEA, frequentemente apresentam dificuldades de socialização e comunicação, podendo resultar em crise de ansiedade devido à necessidade de realização de tarefas que requerem essas habilidades, como por exemplo, uma reunião “cara-a-cara” com o cliente, ou o envio de uma mensagem ou email para pessoas externas ao time."
+        back: "For many neurodivergent individuals, especially those with ASD due to cognitive rigidity, routine, organization, and predictability contribute significantly to well-being in daily activities. A stable routine can reduce anxiety and stress, provide a sense of security, and support autonomy in task execution."
         },
         {
         id: 11,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "11",
-                title: "Rápido e Efetivo",
-                text: "Busque encurtar a duração de sessões de programação em pares e de cerimônias como Daily e Sprint Review, para reduzir a chance de fadiga cognitiva em pessoas colaboradoras neurodivergentes."
+                title: "Fast and Effective",
+                text: "Shorten the duration of pair programming sessions and ceremonies such as the Daily and Sprint Review, in order to reduce the likelihood of cognitive fatigue among neurodivergent team members."
             }
             ],
-        back: "Pessoas neurodivergentes, sobretudo com TEA, podem apresentar uma lógica de planejamento diferente, bem como aquelas com TDAH frequentemente apresentam dificuldades nos níveis atencionais e percepção de tempo. Ambos os casos podem levar a dificuldades em estimar, controlar ou gerenciar a duração de realização de uma tarefa.Pessoas neurodivergentes, sobretudo com TEA, podem apresentar uma lógica de planejamento diferente, bem como aquelas com TDAH frequentemente apresentam dificuldades nos níveis atencionais e percepção de tempo. Ambos os casos podem levar a dificuldades em estimar, controlar ou gerenciar a duração de realização de uma tarefa."
-        },
+        back: "Agile ceremonies often involve simultaneous oral and visual presentations, as well as a larger number of participants (such as technical teams and clients). Individuals with ADHD may experience challenges in divided attention between multiple stimuli, while individuals with ASD may encounter difficulties in communication and social interaction. Both situations demand high mental effort for executive control, which may result in cognitive fatigue."
+    },
         {
         id: 12,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "12",
-                title: "Daily Escrita",
-                text: "Possibilite a adaptação da cerimônia Daily presencial/online para a prática de uma daily escrita, utilizando ferramentas online de gestão de projetos ou comunicação (como um canal #daily no Slack) na qual as pessoas colaboradoras escrevam: o que fiz, o que estou fazendo, o que vou fazer, meus bloqueios."
+                title: "Written Daily",
+                text: "Enable the adaptation of the Daily ceremony (in-person or online) into a written format, using online project management or communication tools (e.g., a #daily channel on Slack), in which team members write: what I did, what I am doing, what I will do, and my blockers."
             }
             ],
-        back: "Pessoas com TEA frequentemente apresentam apego por tarefas repetitivas devido à chamada rigidez cognitiva, bem como pessoas com TDAH apresentam níveis mais baixos de dopamina, o que dificulta a motivação para iniciar ou concluir tarefas monótonas ou sem recompensa imediata, constituindo gatilhos para a procrastinação. Diante disso, identificar claramente tais tarefas pode auxiliar numa melhor escolha da pessoa a executá-la."
-        },
+        back: "In a recent study with neurodivergent individuals, the Daily ceremony was commonly reported as a trigger of anxiety for individuals with ASD and/or ADHD. Although routine can be a positive factor for individuals with ASD, difficulties in socialization and communication prevail as detractors. For individuals with ADHD, challenges include time management and sustaining focus on task production due to heightened anxiety prior to the Daily, requiring alternatives to the standard model."
+    },
         {
         id: 13,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "13",
-                title: "Daily 1:1",
-                text: "Ofereça a possibilidade da pessoa colaboradora neurodivergente não participar da cerimônia Daily, fazendo um follow-up escrito ou 1:1 presencial/online com a liderança ao longo do dia."
+                title: "1:1 Daily",
+                text: "Offer the possibility for neurodivergent team members not to participate in the Daily ceremony, instead providing written updates or one-to-one follow-ups with leadership in person or online throughout the day."
             }
             ],
-        back: "Pessoas com TEA podem enfrentar dificuldades com comunicação e interpretação de instruções, o que pode gerar insegurança em iniciar tarefas com dúvidas. Já pessoas com TDAH podem ter baixa autoconfiança em ambientes que exigem foco contínuo, evitando pedir ajuda por medo de julgamentos. A falta de um ambiente acolhedor e claro quanto à possibilidade de esclarecer qualquer tipo de dúvida, mesmo as mais simples, pode resultar em travamentos, isolamento ou erros evitáveis."
+        back: "In a recent study with neurodivergent individuals, the Daily ceremony was commonly reported as a trigger of anxiety for individuals with ASD and/or ADHD. Although routine can be a positive factor for individuals with ASD, difficulties in socialization and communication prevail as detractors. For individuals with ADHD, challenges include time management and sustaining focus on task production due to heightened anxiety prior to the Daily, requiring alternatives to the standard model."
         },
         {
         id: 14,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ASD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "14",
-                title: "Foco no Fim",
-                text: "Teste agendar reuniões e cerimônias ágeis para o horário de final de expediente, em vez do período da manhã ou início da tarde, verificando encerrar o dia de trabalho com possibilidade de um momento posterior para redução do stress ou autorregulação de pessoas colaboradoras neurodivergentes."
-             }
+                title: "End-of-Day Focus",
+                text: "Try scheduling agile meetings and ceremonies for the end of the workday, rather than in the morning or early afternoon, aiming to allow neurodivergent team members time afterward for stress reduction and Self-regulation."
+            }
             ],
-        back: "Pessoas neurodivergentes, sobretudo com TEA, podem vir a apresentar dificuldades não apenas na inicialização, mas também na conclusão de tarefas. Isto pode ocorrer tanto devido ao apego excessivo por precisão e excelência, quanto à condição de rigidez cognitiva, o que pode acarretar em um conforto psicológico em manter-se na tarefa que está e evitar um novo cenário de trabalho."
+        back: "Due to the high mental effort required to maintain executive control during stressful agile ceremonies (stemming from difficulties in socialization and communication for individuals with ASD, or from challenges in concentration, divided attention, and working memory for individuals with ADHD) neurodivergent individuals often need a decompression moment for stress reduction and/or emotional Self-regulation right after the meeting."
         },
         {
         id: 15,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Planejamento"],
+        category: "Agile Practices",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Planning"],
         front: [
             {
                 cardNum: "15",
-                title: "Reunião Informada",
-                text: "Busque explicitar o motivo de uma reunião, para reduzir a ansiedade ou auxiliar no planejamento de pessoas colaboradoras neurodivergentes, bem como fornecer documentos previamente para permitir tempo de processamento antes de discussões."
+                title: "Informed Meeting",
+                text: "Clearly state the purpose of a meeting to reduce anxiety and assist in planning for neurodivergent team members, and provide documents in advance to allow processing time before discussions."
             }
             ],
-        back: "Pessoas neurodivergentes frequentemente apresentam variações nos níveis de foco e energia ao longo do dia, influenciadas por fatores como hiperfoco, sensibilidade sensorial e fadiga cognitiva. Exigir uma produtividade constante pode levar ao esgotamento, queda de desempenho e aumento da ansiedade. Reconhecer que o ritmo ideal de trabalho pode variar e permitir certa flexibilidade nos ciclos de realização de tarefas pode contribuir para um melhor aproveitamento do potencial de neurodivergentes."
+        back: "Neurodivergent individuals, especially those with ASD, often require predictability and planning due to cognitive rigidity. Individuals with ADHD may need additional time to process information and provide responses.Neurodivergent individuals, especially those with ASD, often require predictability and planning due to cognitive rigidity. Individuals with ADHD may need additional time to process information and provide responses."
     },
     {
         id: 16,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA"],
-        relatedCP: ["Auto-regulação"],
+        category: "Agile Practices",
+        relatedND: ["ASD"],
+        relatedCP: ["Self-regulation"],
         front: [
             {
                 cardNum: "16",
-                title: "Bateria Recarregável",
-                text: "Respeite diferentes ritmos de trabalho e apoie ciclos de trabalho baseados em energia para atender às necessidades e reduzir a fadiga cognitiva de pessoas colaboradoras neurodivergentes."
-             }
+                title: "Rechargeable Battery",
+                text: "Respect different work rhythms and support energy-based task cycles to meet the needs of neurodivergent team members and reduce cognitive fatigue."
+            }
             ],
-        back: "Pessoas neurodivergentes, sobretudo com TEA, costumam requerer previsibilidade e planejamento, devido a sua rigidez cognitiva. Já pessoas com TDAH podem precisar de um tempo maior para processamento de informações e fornecimento de respostas."
+        back: "Neurodivergent individuals often experience variations in focus and energy levels throughout the day, influenced by factors such as hyperfocus, sensory sensitivity, and cognitive fatigue. Demanding constant productivity may lead to burnout, decreased performance, and increased anxiety. Recognizing that the optimal work rhythm may vary and allowing flexibility in task cycles can help leverage neurodivergent potential."
     },
     {
         id: 17,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Organização"],
+        category: "Agile Practices",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "17",
-                title: "Parada Obrigatória",
-                text: "Observe se pessoas colaboradoras neurodivergentes encontram-se desperdiçando tempo em tarefas desnecessárias, realizando gold plating ou se comprometendo excessivamente com o trabalho, orientando-as sobre quando encerrar as tarefas."
-             }
+                title: "Mandatory Stop",
+                text: "Monitor whether neurodivergent team members are wasting time on unnecessary tasks, engaging in gold plating, or overcommitting to work, and guide them on when to conclude tasks."
+            }
             ],
-        back: "Devido ao alto esforço mental para manter o controle funcional diante de cerimônias ágeis geradoras de estresse, tanto pela dificuldade de socialização e comunicação em pessoas com TEA, quanto pela dificuldade em manutenção da concentração, atenção dividida, e memória de trabalho por pessoas com TDAH, frequentemente pessoas neurodivergentes precisam de um momento de descompressão para redução do estresse e/ou autorregulação emocional, logo após a reunião."
+        back: "Neurodivergent individuals, particularly those with ASD, may face difficulties not only in task initiation but also in task completion. This may occur due to excessive attachment to precision and excellence or cognitive rigidity, which creates psychological comfort in remaining with the current task and avoiding new scenarios."
     },
     {
         id: 18,
-        category: "Práticas Ágeis",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Comunicação"],
+        category: "Agile Practices",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "18",
-                title: "Pergunta Amiga",
-                text: "Incentive e normalize a solicitação de esclarecimentos ou ajuda sobre a realização de tarefas, evitando ambiguidades e o travamento/isolamento de pessoas colaboradoras neurodivergentes."
+                title: "Friendly Question",
+                text: "Encourage and normalize help-seeking and clarification requests regarding task execution, thereby avoiding ambiguities and preventing bottlenecks or isolation of neurodivergent team members."
             }
             ],
-        back: "Em estudo recente com pessoas neurodivergentes, a cerimônia Daily foi comumente apontada um gatilho de ansiedade por pessoas com TEA e/ou TDAH. Apesar da rotina ser um fator positivo para pessoas com TEA, a dificuldade de socialização e comunicação sobressai como fator detrator da daily, bem como, no caso de pessoas com TDAH, a dificuldade na gestão de tempo e manutenção do foco na produção de tarefas devido à elevação da ansiedade antes da daily, requerendo alternativas para o modelo usual de cerimônia."
+        back: "Individuals with ASD may struggle with communication and interpretation of instructions, leading to insecurity when starting tasks with doubts. Individuals with ADHD may experience low self-confidence in focus-demanding environments, avoiding help-seeking out of fear of judgment. A lack of a supportive environment and clarity about the possibility of asking any type of question (even simple ones) may result in bottlenecks, isolation, or avoidable mistakes."
     },
     {
         id: 19,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH"],
-        relatedCP: ["Comunicação"],
+        category: "Agile Practices",
+        relatedND: ["ADHD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "19",
-                title: "Fora da Caixa",
-                text: "Esteja aberto a reformulações de idéias ou ao reconhecimento de que uma tarefa pode ser realizada de uma forma que você não havia considerado, pois pessoas neurodivergentes podem apresentar um modo diferente de raciocínio ou resolução de problemas."
+                title: "Out of the Box",
+                text: "Be open to reformulations of ideas or to recognizing that a task may be performed in ways not previously considered, as neurodivergent individuals may present different reasoning or problem-solving approaches."
             }
             ],
-        back: "Pessoas com TDAH frequentemente apresentam dificuldades em funções executivas como organização e memória de trabalho, além de em ações como manutenção do nível atencional ou inicialização/finalização de tarefas. Isso pode requerer estratégias para a manutenção do seu engajamento e produtividade, como o pareamento com uma pessoa neurotípica. No entanto, tal estratégia pode ter efeito contrário em pessoas com TEA, por apresentarem dificuldades em socialização, muitas vezes preferindo o isolamento na execução de tarefas."
+        back: "Neurodivergent individuals have brains that function differently from the majority, often demonstrating creative and less conventional ways of thinking and interacting with the world. At work, these differences may manifest in various forms, such as problem-solving capabilities and innovative ideas."
     },
     {
         id: 20,
-        category: "Práticas Ágeis",
-        relatedND: ["TDAH"],
-        relatedCP: ["Comunicação"],
+        category: "Agile Practices",
+        relatedND: ["ADHD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "20",
-                title: "Dupla Dinâmica",
-                text: `Crie o pareamento entre uma pessoa colaboradora neurodivergente e uma "buddie": buddies são membros de um mesmo Time Ágil que dão assistência a neurodivergentes em seu engajamento e produtividade diários, como em iniciar e manter o foco nas tarefas, bem como priorizar e gerenciar a carga de trabalho.`
-             }
+                title: "Dynamic Duo",
+                text: `Establish pairing between a neurodivergent team member and a “buddy.” Buddies are members of the same Agile Team who support neurodivergent colleagues in their daily engagement and productivity, for example, by helping them start tasks, maintain focus, prioritize work, and manage workload.`
+            }
             ],
-        back: "Pessoas neurodivergentes possuem um cérebro que funciona de um modo diferente da maioria, podendo ter uma mente criativa e menos restrita a padrões convencionais, e apresentando outras formas de raciocínio e de interação com o mundo. No trabalho, essas diferenças podem manifestar-se de modos distintos, como a capacidade de resolver problemas e ter ideias inovadoras."
+        back: "Individuals with ADHD frequently face difficulties in executive functions such as organization and working memory, as well as in maintaining attention or starting/completing tasks. Strategies such as pairing with a neurotypical collaborator may help maintain engagement and productivity. However, this approach may have the opposite effect for individuals with ASD, who often face challenges in socialization and may prefer isolation when executing tasks."
     },
     {
         id: 21,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "21",
-                title: "Bem Claro",
-                text: "Torne normas sociais explícitas, como num guia de integração, assim como verifique a compreensão e confirme regularmente se as comunicações são assimiladas conforme pretendido, evitando mal-entendidos com pessoas colaboradoras neurodivergentes."
+                title: "Crystal Clear",
+                text: "Make social norms explicit (e.g., in an onboarding guide), and regularly check understanding to confirm that communication is being received as intended, preventing misunderstandings with neurodivergent team members."
             }
             ],
-        back: "Pessoas neurodivergentes, sobretudo com TEA, podem apresentar dificuldades na comunicação e interação social, bem como pode, frequentemente, apresentar introversão. Tais dificuldades sociais e comunicativas requerem não apenas um alto esforço mental para o controle funcional durante cerimônias e reuniões, mas também podem necessitar de estratégias que promovam um maior conforto psicológico durante as atividades."
+        back: "Neurodivergent individuals may face challenges in understanding social rules or processing information and instructions (particularly when provided solely orally). While individuals with ADHD may struggle to sustain attention due to parallel thought flows, individuals with ASD may encounter communication difficulties, such as impaired comprehension of gestures and expressions, or uncertainty regarding when to speak or interrupt others in meetings."
     },
     {
         id: 22,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "22",
-                title: "Fala Fácil",
-                text: "Mantenha uma linguagem clara, acessível e, se possível, sem jargões para garantir que todas as pessoas colaboradoras neurodivergentes compreendam, independentemente da sua experiência ou formação."
+                title: "Plain Speech",
+                text: "Maintain clear, accessible, and jargon-free language whenever possible, ensuring that all neurodivergent team members can comprehend communications regardless of their background or expertise."
             }
             ],
-        back: "Para pessoas neurodivergentes, sobretudo com TEA, mensagens escritas (como por email, Slack WhastApp e similares) tornam-se um auxílio para interação e comunicação devido à natureza assíncrona e distância social, mitigando a ansiedade associada à comunicação em tempo real. No entanto, assim como nos telefonemas, o ato da chegada de mensagens escritas também pode tornar-se um gatilho de ansiedade para a pessoas neurodivergentes."
+        back: "Neurodivergent individuals, particularly those with ASD, may experience difficulties in processing oral or written communication, including challenges in understanding irony, sarcasm, jokes, jargon, and other non-literal aspects of language."
     },
     {
         id: 23,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "23",
-                title: "Reforço Escrito",
-                text: "Não faça muitas perguntas ou forneça instruções muito longas de modo puramente oral, aumentando o uso de comunicação escrita como reforço (também após reuniões)."
+                title: "Written Reinforcement",
+                text: "Avoid asking too many questions or giving overly long instructions purely orally; instead, increase the use of written communication as reinforcement (including after meetings)."
             }
             ],
-        back: "Pessoas neurodivergentes podem apresentar ruídos na compreensão de informações e instruções, sobretudo quando puramente orais, por motivos distintos. Enquanto pessoas com TDAH podem apresentar dificuldades na manutenção do nível atencional devido ao fluxo de pensamentos paralelos, pessoas com TEA podem apresentar dificuldades na comunicação, com prejuízo na compreensão de gestos, contatos, expressões e outros aspectos da linguagem oral ou escrita."
+        back: "Neurodivergent individuals may experience difficulties in processing information and instructions when provided exclusively orally, for different reasons. While individuals with ADHD may have difficulty maintaining attention due to parallel thought flows, individuals with ASD may struggle with communication, including impaired comprehension of gestures, eye contact, expressions, and other aspects of oral or written language."
     },
     {
         id: 24,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "24",
-                title: "Lendo o Áudio",
-                text: "A utilização de ferramentas com transcrição de mensagens de áudio, como Slack e Whatsapp, pode ajudar na comunicação com pessoas colaboradoras neurodivergentes."
+                title: "Reading Audio",
+                text: "Utilize tools that transcribe audio messages (e.g., Slack, WhatsApp) to enhance communication with neurodivergent team members."
             }
             ],
-        back: "Pessoas neurodivergentes podem apresentar ruídos na compreensão de informações e instruções, sobretudo quando puramente orais, por motivos distintos. Enquanto pessoas com TDAH podem apresentar dificuldades na manutenção do nível atencional devido ao fluxo de pensamentos paralelos, pessoas com TEA podem apresentar dificuldades na comunicação, com prejuízo na compreensão de gestos, contatos, expressões e outros aspectos da linguagem oral ou escrita."
+        back: "Neurodivergent individuals may experience difficulties in processing information and instructions when provided exclusively orally, for different reasons. While individuals with ADHD may have difficulty maintaining attention due to parallel thought flows, individuals with ASD may struggle with communication, including impaired comprehension of gestures, eye contact, expressions, and other aspects of oral or written language."
     },
     {
         id: 25,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "25",
-                title: "Direto ao Ponto",
-                text: "Ao se comunicar por email ou mensagem com uma pessoa colaboradora neurodivergente: introduza o assunto no título/início do texto para reduzir ansiedade, seja bastante claro e específico (utilizar verbos para ações pode ajudar), mantenha-se breve e/ou topifique o assunto caso seja mais longo, buscando grifar palavras/partes importantes."
-            }
+                title: "Straight to the Point",
+                text: "When communicating by email or message with a neurodivergent team member: state the main topic in the subject line or at the beginning to reduce anxiety, be clear and specific (using action verbs can help), keep it brief and/or structure longer messages into bullet points, and highlight key words or important parts."
+                }
             ],
-        back: "Pessoas neurodivergentes, sobretudo com TEA, podem apresentar ruídos na compreensão de expressões da comunicação oral ou escrita, tendo dificuldades na comunicação e prejuízo na compreensão de ironia, sarcasmo, piadas, jargões e outros aspectos da linguagem."
+        back: "For neurodivergent individuals, especially those with ASD, written messages (e.g., email, Slack, WhatsApp, and similar tools) can support interaction and communication due to their asynchronous nature and the reduced need for real-time social engagement, helping to mitigate anxiety associated with real-time communication. However, as with phone calls, receiving written messages can also become an anxiety trigger for neurodivergent people."
     },
     {
         id: 26,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "26",
-                title: "Câmera Livre",
-                text: "Permita que pessoas colaboradoras neurodivergentes mantenham suas câmeras desligadas durante reuniões online, auxiliando na ansiedade social e compreendendo que câmera desligada não significa desinteresse ou desatenção."
+                title: "Optional Camera",
+                text: "Allow neurodivergent team members to keep their cameras off during online meetings, thereby alleviating social anxiety and recognizing that turning off the camera does not equate to disinterest or inattention."
             }
             ],
-        back: "Pessoas neurodivergentes podem apresentar dificuldades na compreensão de regras sociais, ou de informações e instruções (sobretudo quando puramente orais). Enquanto pessoas com TDAH podem apresentar dificuldades na manutenção do nível atencional devido ao fluxo de pensamentos paralelos, pessoas com TEA podem apresentar dificuldades na comunicação, como prejuízo na compreensão de gestos e expressões, ou não ter certeza sobre quando falar e interromper pessoas em reuniões."
+        back: "Neurodivergent individuals, particularly those with ASD, may experience challenges with communication and social interaction, and may often exhibit introversion. Such social and communicative difficulties not only demand high mental effort for functional control during ceremonies and meetings, but may also require strategies to promote greater psychological comfort during these activities."
     },
     {
         id: 27,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "27",
-                title: "Ponte Social",
-                text: "As pessoas neurotípicas pareadas como buddies também podem auxiliar a pessoa colaboradora neurodivergente na comunicação e socialização dentro da empresa, como no atendimento a clientes e no envio de mensagens/emails a outras pessoas colaboradoras as quais não conhecem."
+                title: "Social Bridge",
+                text: "Paired neurotypical “buddies” can also assist neurodivergent team members with communication and socialization within the company, such as in client interactions or sending messages/emails to unfamiliar colleagues."
             }
             ],
-        back: "Em eventos sociais, reuniões ou encontros com um maior número de participantes, pessoas com TEA podem experimentar desafios relacionados à comunicação, interação social e hipersensibilidade sensorial, diminuindo sua capacidade de manter-se por muito tempo em um ambiente excessivamente estimulante sem acarretar em fadiga cognitiva e ansiedade social."
+        back: "As in the case of individuals with ADHD, pairing with familiar neurotypical colleagues can support neurodivergent individuals with ASD in managing social interaction challenges, thereby reducing communication-related anxiety triggers both within and outside the company."
     },
     {
         id: 28,
-        category: "Comunicação e Socialização",
-        relatedND: ["TEA"],
-        relatedCP: ["Comunicação"],
+        category: "Communication and Social Interaction",
+        relatedND: ["ASD"],
+        relatedCP: ["Communication"],
         front: [
             {
                 cardNum: "28",
-                title: "Sem Pressão",
-                text: `Realize convites, mas busque compreender que algumas pessoas colaboradoras neurodivergentes podem preferir não participar de cerimônias ágeis ou eventos "sociais" do time/empresa, devendo ser consideradas tanto "team player" quanto aquelas que participam.`
+                title: "No Pressure",
+                text: `Extend invitations, but recognize that some neurodivergent team members may prefer not to participate in agile ceremonies or team/company social events, and should still be regarded as "team players" just as much as those who attend.`
             }
             ],
-        back: "Assim com no caso das pessoas com TDAH, para auxílio na manutenção do foco e produtividade, o pareamento com pessoas neurotípicas mais familiares pode auxiliar pessoas com TEA com dificuldades de interação social, diminuindo gatilhos de ansiedade na comunicação interna e externa à empresa."
+        back: "In social events, meetings, or gatherings with larger numbers of participants, individuals with ASD may face challenges related to communication, social interaction, and sensory hypersensitivity, reducing their ability to remain in overstimulating environments without experiencing cognitive fatigue and social anxiety."
     },
     {
         id: 29,
-        category: "Liderança e Empresa",
-        relatedND: ["TEA"],
-        relatedCP: ["Organização"],
+        category: "Leadership and Organization",
+        relatedND: ["ASD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "29",
-                title: "Gestão Empática",
-                text: "Promova um tratamento individualizado e com adaptações claras a pessoas lideradas neurodivergentes, mantendo as adaptações bem informadas à empresa (criação de um espaço seguro psicológico)."
+                title: "Empathic Management",
+                text: "Provide individualized treatment and clear accommodations for neurodivergent employees, while ensuring that such accommodations are well-communicated to the organization, thereby fostering psychological safety."
             }
             ],
-        back: "O deslocamento até o local de trabalho e a permanência em ambientes presenciais podem representar fontes significativas de estresse para pessoas neurodivergentes, sobretudo com TEA. Dificuldades como hipersensibilidade sensorial, mudanças de rotina, interações sociais inesperadas ou variações no nível de energia mental ao longo do dia podem comprometer o bem-estar e a produtividade no contexto presencial."
+        back: "Neurodivergent individuals have specific needs that may not be addressed by standardized management practices, leading to feelings of inadequacy within the team. Moreover, when adaptations are not communicated by leadership to the organization, it may create instability and insecurity among employees. A workplace that respects individuality and ensures clarity regarding agreed-upon adaptations can strengthen inclusion and the well-being of neurodivergent individuals."
     },
     {
         id: 30,
-        category: "Liderança e Empresa",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Organização"],
+        category: "Leadership and Organization",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "30",
-                title: "Foco em Resultado",
-                text: `Busque sempre avaliar o desempenho de pessoas lideradas neurodivergentes pela sua produtividade, não pelo “ritmo e velocidade” na realização de tarefas, e/ou "sensação de presença/participação" nas atividades do time ou da empresa.`
+                title: "Results-Oriented",
+                text: `Always assess the performance of neurodivergent employees based on productivity and quality of deliverables, rather than on “speed of task completion” or “apparent presence/participation” in team or company activities.`
             }
             ],
-        back: "A ausência de controle sobre ambientes de trabalho compartilhados pode pode gerar crise de ansiedade, fadiga cognitiva, distração ou desconforto em pessoas neurodivergentes,, pois aquelas com TEA podem apresentar ansiedade social diante de muitas pessoas ou hipersensibilidade sensorial a determinadas luzes, tipos de ruídos e níveis de temperatura, enquanto as com TDAH podem facilmente ter seu foco desviado por fatores como socialização constante."
+        back: "Neurodivergent individuals may exhibit distinct work styles, such as frequent Self-regulation breaks (ADHD) or preferences for more objective and quiet interactions (ASD). Evaluating performance based on production speed or engagement signals (e.g., speaking in meetings) may result in unfair assessments and obscure the actual contributions of neurodivergent employees. Focusing on technical quality and outcomes, while respecting individual working styles, ensures fairer evaluation aligned with diversity and inclusion."
     },
     {
         id: 31,
-        category: "Liderança e Empresa",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Organização"],
+        category: "Leadership and Organization",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "31",
-                title: "Foco em Resultado",
-                text: "Identifique necessidades de pessoas lideradas neurodivergentes e assuma a responsabilidade pela solicitação e articulação de adaptações com demais áreas da empresa, evitando a carga total sobre elas para que enfrentarem as negociações ou busquem suas próprias soluções."
+                title: "Shared Load",
+                text: "Identify the needs of neurodivergent employees and take responsibility for requesting and negotiating accommodations with other organizational units, preventing the full burden from falling on the individuals themselves."
             }
             ],
-        back: "Para pessoas neurodivergentes, mudanças frequentes de colegas de time podem representar desafios adicionais relacionados à socialização, comunicação interpessoal e à previsibilidade das interações. Pessoas com TEA, por exemplo, podem levar mais tempo para estabelecer segurança emocional e compreender dinâmicas sociais no novo time, enquanto as com TDAH podem se beneficiar de relações já estabelecidas para manter foco e engajamento."
+        back: "For neurodivergent employees to access adaptations in their work environment or work model, they often need to request them from the company’s HR department. This process can be especially draining for individuals with communication difficulties (ASD) or challenges in planning and executing negotiations (ADHD). Having to negotiate in writing or in person can create emotional overload and may even lead them to withdraw the request, or leave the job altogether."
     },
     {
         id: 32,
-        category: "Liderança e Empresa",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Organização"],
+        category: "Leadership and Organization",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "32",
-                title: "Alocação Produtiva",
-                text: "Em modelos de trabalho projetizados, se possível, busque manter pessoas lideradas neurodivergentes alocadas junto a colegas que já têm familiaridade, pois isto pode auxiliar na comunicação, socialização, engajamento e produtividade."
+                title: "Productive Allocation",
+                text: "In project-based work models, when possible, keep neurodivergent employees assigned to teams with familiar colleagues, as this may support communication, socialization, engagement, and productivity."
             }
             ],
-        back: "Para que pessoas neurodivergentes tenham acesso a adaptações de ambiente/modelo de trabalho, é comum que precisem solicitar ao RH da empresa. Esse processo pode ser especialmente desgastante para pessoas que têm dificuldades de comunicação (TEA) ou de planejamento e execução de negociações (TDAH). Ter que negociar escrita ou pessoalmente pode gerar sobrecarga emocional e levar até à desistência do pedido ou do próprio trabalho."
+        back: "For neurodivergent individuals, frequent changes in team composition may present additional challenges related to socialization, interpersonal communication, and predictability of interactions. Individuals with ASD, for example, may require more time to establish emotional safety and understand new team dynamics, while those with ADHD may benefit from established relationships to maintain focus and engagement."
     },
     {
         id: 33,
-        category: "Liderança e Empresa",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Organização"],
+        category: "Leadership and Organization",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "33",
-                title: "Lugar Reservado",
-                text: "Possibilite a reserva de uma sala ou ambiente de trabalho presencial em separado para pessoas neurodivergentes, com possibilidades de controles como luz, temperatura e ergonomia de mobiliário. Prover fones canceladores de ruído também ajudam na sensação de controle, conforto e segurança física e psicológica."
+                title: "Reserved Space",
+                text: "Provide the option for neurodivergent team members to reserve a separate room or workspace, with environmental controls such as lighting, temperature, and furniture ergonomics. Providing noise-cancelling headphones can also increase the sense of control, comfort, and physical and psychological safety."
             }
             ],
-        back: "Pessoas neurodivergentes podem apresentar estilos de trabalho diferentes, como pausas frequentes para autorregulação (TDAH) ou preferências por interações mais objetivas e silenciosas (TEA). Avaliar desempenho com base em velocidade de produção ou sinais de engajamento (como falas em reuniões), pode gerar avaliações injustas e mascarar a real contribuição da pessoa neurodivergente. Focar na qualidade técnica na entrega de resultados, respeitando o modo de funcionamento individual, garante uma avaliação mais justa e alinhada com a diversidade e inclusão nos times."
+        back: "The lack of control in shared work environments can trigger anxiety episodes, cognitive fatigue, distraction, or discomfort in neurodivergent individuals. Employees with ASD may experience social anxiety around many people or sensory hypersensitivity to certain lighting, noise levels, and temperature conditions, while those with ADHD may easily lose focus due to factors such as constant social interaction."
     },
     {
         id: 34,
-        category: "Liderança e Empresa",
-        relatedND: ["TEA", "TDAH"],
-        relatedCP: ["Organização"],
+        category: "Leadership and Organization",
+        relatedND: ["ASD", "ADHD"],
+        relatedCP: ["Arrangement"],
         front: [
             {
                 cardNum: "34",
-                title: "100% Remoto",
-                text: "Se possível, possibilite o trabalho 100% remoto a pessoas lideradas neurodivergentes, ou diminua drasticamente a necessidade de comparecimento presencial (criação de um espaço seguro físico e psicológico)."
+                title: "Fully Remote",
+                text: "Whenever possible, allow neurodivergent employees to work fully remotely, or substantially reduce requirements for in-person presence, thereby fostering both physical and psychological safety."
             }
             ],
-        back: "Pessoas neurodivergentes possuem necessidades específicas que podem não ser contempladas por práticas padronizadas de gestão, gerando sensação de inadequação ao time. Ainda, quando adaptações não são comunicadas pela liderança à empresa, há risco de instabilidade e insegurança nas pessoas lideradas. Um ambiente com respeito à individualidade e clareza sobre as adaptações acordadas pode fortalecer a inclusão e o bem-estar das pessoas neurodivergentes na empresa."
+        back: "Commuting to the workplace and staying in on-site environments can be significant sources of stress for neurodivergent individuals, especially those with ASD. Challenges such as sensory hypersensitivity, routine changes, unexpected social interactions, or fluctuations in mental energy throughout the day may compromise well-being and productivity in on-site settings."
     },
     ]

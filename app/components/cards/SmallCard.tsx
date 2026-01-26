@@ -42,20 +42,20 @@ function SmallCard({cardData, state, size}: {cardData: Card, state: boolean, siz
 
     const cardDetails = [
         {
-            type: "Práticas Ágeis",
-            color: "bg-gradient-to-br from-lime-300 to-lime-700",
+            type: "Agile Practices",
+            color: "bg-gradient-to-br from-[#B3E56D] to-[#51983A]",
             illustration: KanBan,
             imgClass: s.kanbanImg + " object-left"
         },
         {
-            type: "Comunicação e Socialização",
-            color: "bg-gradient-to-br from-sky-500 to-sky-800",
+            type: "Communication and Social Interaction",
+            color: "bg-gradient-to-br from-[#0097FE] to-[#0D5AA8]",
             illustration: Speaker,
             imgClass: s.speakerImg + " object-top-left"
         },
         {
-            type: "Liderança e Empresa",
-            color: "bg-gradient-to-br from-pink-500 to-pink-800",
+            type: "Leadership and Organization",
+            color: "bg-gradient-to-br from-[#E4509C] to-[#C91572]",
             illustration: Building,
             imgClass: s.buildingImg
         }
