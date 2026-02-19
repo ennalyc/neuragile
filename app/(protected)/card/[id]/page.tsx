@@ -1,12 +1,16 @@
 import { data } from "@/app/constants/cardData";
-import Tag from "@/app/components/ui/Tag";
+
 import ChecklistSection from "@/app/components/sections/ChecklistSection";
 import SmallCard from "@/app/components/cards/SmallCard";
 import Link from "next/link";
 import MultipleTags from "@/app/components/ui/MultipleTags";
 import FrontCard from "@/app/components/cards/FrontCard";
 import BackCard from "@/app/components/cards/BackCard";
+import CollectionButton from "@/app/components/ui/CollectionButton";
+import { getCollections } from "@/app/lib/collections";
+
 import { BookMarked, CircleCheck, CircleX } from "lucide-react";
+
 
 // TO-DO: add feedback functionality
 
@@ -25,11 +29,6 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
   const feedbackOptions = [
     {
       id: 1,
-      icon: <BookMarked size={16}/>,
-      text: 'Save to my profile'
-    },
-    {
-      id: 2,
       icon: <BookMarked size={16}/>,
       text: 'Add to a collection'
     }
@@ -52,6 +51,9 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
       icon: <CircleCheck size={16}/>
     }
   ]
+  
+  const collections = await getCollections()
+
   return (
     <div className="mt-8 px-30 flex justify-center items-center mb-16">
       {
@@ -89,32 +91,25 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
                 </section>
               </div>
               <section className="flex flex-row gap-6">
-                <div className="flex flex-col items-start">
-                  <div className="transition-transform duration-300 hover:scale-[1.02]">
-                  <FrontCard
-                  cardData={currentCard}
-                  size="large"
+                <div className="flex flex-col gap-3 items-start">
+                  <div className="transition-transform duration-300 hover:scale-[1.02] mb-4">
+                    <FrontCard
+                    cardData={currentCard}
+                    size="large"
+                    />
+                  </div>
+                  <CollectionButton
+                  curId={id}
                   />
                 </div>
-                <div className="px-3 mt-4 flex flex-col items-start gap-3">
-                    {
-                      feedbackOptions.map((fd) => (
-                        <div className="flex gap-2 cursor-pointer flex-row text-sm text-neutral-400 hover:text-neutral-500" key={fd.id}>
-                          {fd.icon}
-                          <p>{fd.text}</p>
-                        </div>
-                      ))
-                    }
-                  </div>
-                </div>
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col gap-3 items-start">
                     <div className="transition-transform duration-300 hover:scale-[1.02]">
                     <BackCard
                     cardData={currentCard}
                     size="large"
                     />
                   </div>
-                  <div className="flex w-80 flex-wrap gap-x-8 gap-y-3 px-4 mt-4">
+                  <div className="flex w-80 flex-wrap gap-x-4 gap-y-3 px-4 mt-4">
                       {
                         checkData.map((check) => (
                           <div className="flex gap-2 cursor-pointer items-center flex-row text-sm text-neutral-400 hover:text-neutral-500" key={check.id}>

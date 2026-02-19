@@ -1,18 +1,26 @@
 import 'server-only'
- 
 import { cookies } from 'next/headers'
 import { cache } from 'react'
-import { decrypt } from '@/app/lib/session'
-import { redirect } from 'next/navigation'
- 
-export const verifySession = cache(async () => {
-  const cookie = (await cookies()).get('session')?.value
-  const session = await decrypt(cookie)
- 
-  if (!session?.userId) {
-    redirect('/auth')
-  }
- 
-  return { isAuth: true, userId: session.userId }
-})
 
+export async function verifySession() {
+  const cookieStore = await cookies()
+  const session = cookieStore.get('session')?.value
+
+  if (!session) return { isAuth: false, userId: null }
+
+  try {
+    const res = await fetch('http://localhost:4000/api/user', {
+      headers: {
+        Cookie: `session=${session}`,
+      },
+      cache: 'no-store',
+    })
+
+    if (!res.ok) return { isAuth: false, userId: null }
+
+    const user = await res.json()
+    return { isAuth: true, userId: user.id, user }
+  } catch {
+    return { isAuth: false, userId: null }
+  }
+}

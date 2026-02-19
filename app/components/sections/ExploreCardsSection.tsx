@@ -91,7 +91,7 @@ const ExploreCardsSection = () => {
         </div>
       </div>
 
-      <section className="w-full max-w-7xl mt-8 mb-16 px-6">
+      <section className="w-full max-w-7xl mt-8 mb-16">
         <h4 className="text-2xl font-bold mb-8">Related Cards</h4>
         <div className="flex flex-row overflow-x-auto gap-6 pb-6 no-scrollbar">
           {relatedCards.length > 0 ? (
