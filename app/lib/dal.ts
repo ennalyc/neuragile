@@ -1,26 +1,17 @@
 import 'server-only'
 import { cookies } from 'next/headers'
-import { cache } from 'react'
+import { jwtVerify } from 'jose'
+
+const secret = new TextEncoder().encode(process.env.JWT_SECRET)
 
 export async function verifySession() {
-  const cookieStore = await cookies()
-  const session = cookieStore.get('session')?.value
-
-  if (!session) return { isAuth: false, userId: null }
+  const token = (await cookies()).get('auth_token')?.value
+  if (!token) return null
 
   try {
-    const res = await fetch('http://localhost:4000/api/user/user', {
-      headers: {
-        Cookie: `session=${session}`,
-      },
-      cache: 'no-store',
-    })
-
-    if (!res.ok) return { isAuth: false, userId: null }
-
-    const user = await res.json()
-    return { isAuth: true, userId: user.id, user }
+    const { payload } = await jwtVerify(token, secret)
+    return payload as { userId: string }
   } catch {
-    return { isAuth: false, userId: null }
+    return null
   }
 }

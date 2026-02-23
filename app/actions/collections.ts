@@ -1,23 +1,31 @@
 'use server'
-import { cookies } from "next/headers"
+
+import { cookies } from 'next/headers'
 
 export async function createCollection(name: string) {
-    const cookieStore = await cookies()
-    const session = cookieStore.get('session')?.value
-    
-    const res = await fetch('http://localhost:4000/collections/createCollection', {
+  const token = (await cookies()).get('auth_token')?.value
+
+  if (!token) {
+    throw new Error('Unauthorized')
+  }
+
+  const res = await fetch(
+    'http://localhost:4000/collections/createCollection',
+    {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Cookie: `session=${session}`,
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ name }),
-    })
-  
-    if (!res.ok) {
-      const error = await res.json().catch(() => ({}))
-      throw new Error(error.message || 'Failed to create collection')
+      cache: 'no-store',
     }
-  
-    return res.json()
+  )
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({}))
+    throw new Error(error.message || 'Failed to create collection')
   }
+
+  return res.json()
+}

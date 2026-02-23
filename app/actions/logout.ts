@@ -4,19 +4,9 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 export async function logout() {
-  const cookieStore = await cookies()
-  const session = cookieStore.get('session')?.value
+  const cookieStore = cookies();
 
-  if (session) {
-    await fetch('http://localhost:4000/api/user/logout', {
-      method: 'POST',
-      headers: {
-        Cookie: `session=${session}`,
-      },
-    })
-  }
-
-  cookieStore.delete('session')
+  (await cookieStore).delete('auth_token')
 
   redirect('/auth')
 }

@@ -2,23 +2,25 @@
 
 import { cookies } from 'next/headers'
 
+
 async function getSessionCookie() {
   const cookieStore = await cookies()
-  return cookieStore.get('session')?.value
+  return cookieStore.get('auth_token')?.value
 }
 
 export async function getCollection(collectionId: number) {
-  const session = await getSessionCookie()
-  if (!session) return null
-
+  const token = await getSessionCookie()
+  if (!token) return null
+  
   const res = await fetch(
     `http://localhost:4000/api/collections/${collectionId}/getCollection`,
     {
       headers: {
-        "Content-Type": "application/json",
-        Cookie: `session=${session}`,
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
-      cache: "no-store",
+      body: JSON.stringify({ name }),
+      cache: 'no-store',
     }
   )
 
@@ -30,34 +32,36 @@ export async function getCollection(collectionId: number) {
 
 
 export async function getCollections() {
-  const session = await getSessionCookie()
-  if (!session) return []
+  const token = await getSessionCookie()
+  if (!token) return []
 
-  const res = await fetch('http://localhost:4000/api/collections/getAllCollections', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      Cookie: `session=${session}`,
-    },
-    cache: 'no-store',
-  })
+  const res = await fetch('http://localhost:4000/api/collections/getAllCollections', 
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ name }),
+      cache: 'no-store',
+    }
+  )
 
   if (!res.ok) return []
   return res.json()
 }
 
 export async function addItemToCollection(collectionId: number, cardId: string) {
-  const session = await getSessionCookie()
-  if (!session) throw new Error('Unauthorized')
+  const token = await getSessionCookie()
+  if (!token) throw new Error('Unauthorized')
 
   const res = await fetch(`http://localhost:4000/api/collections/${collectionId}/addItem`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Cookie: `session=${session}`,
-    },
-    body: JSON.stringify({ cardId }),
-  })
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ name }),
+      cache: 'no-store',
+    })
 
   if (!res.ok) {
     const error = await res.json().catch(() => ({}))
@@ -68,16 +72,17 @@ export async function addItemToCollection(collectionId: number, cardId: string) 
 }
 
 export async function getAllCollectedCards() {
-  const session = await getSessionCookie()
-  if (!session) return []
+  const token = await getSessionCookie()
+  if (!token) return []
 
   const res = await fetch('http://localhost:4000/api/collections/getAllItems', {
-    headers: {
-      'Content-Type': 'application/json',
-      Cookie: `session=${session}`,
-    },
-    cache: 'no-store',
-  })
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ name }),
+      cache: 'no-store',
+    })
 
   if (!res.ok) return []
   return res.json()

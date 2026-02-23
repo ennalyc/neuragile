@@ -5,14 +5,12 @@ import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers' 
 
 async function postAuth(url: string, body: any) {
-  const res = await fetch(url, {
+  return await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    credentials: 'include', 
     body: JSON.stringify(body),
-    redirect: 'manual', 
+    cache: 'no-store'
   })
-  return res
 }
 
 export async function signup(state: FormState, formData: FormData): Promise<FormState> {
@@ -36,20 +34,15 @@ export async function signup(state: FormState, formData: FormData): Promise<Form
     return { errors: { _form: ['Signup failed. Please try again.'] } }
   }
 
-  const setCookieHeader = res.headers.get('set-cookie')
-  
-  if (setCookieHeader) {
-    const cookieValue = setCookieHeader.split(';')[0].split('=')[1]
-    
-    const cookieStore = await cookies()
-    cookieStore.set('session', cookieValue, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production', 
-      sameSite: 'lax',
-      path: '/',
-      maxAge: 60 * 60 * 24 * 7, 
-    })
-  }
+  const data = await res.json();
+
+  (await cookies()).set('auth_token', data.token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    path: '/',
+    maxAge: 60 * 60,
+  })
 
   redirect('/') 
 }
