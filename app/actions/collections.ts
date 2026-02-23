@@ -10,7 +10,7 @@ export async function createCollection(name: string) {
   }
 
   const res = await fetch(
-    'http://localhost:4000/collections/createCollection',
+    'http://localhost:8080/collections/createCollection',
     {
       method: 'POST',
       headers: {

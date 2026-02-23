@@ -26,7 +26,7 @@ export async function login(state: FormState, formData: FormData): Promise<FormS
 
   const { email, password } = validatedFields.data
 
-  const res = await postAuth('http://localhost:4000/api/user/login', { email, password })
+  const res = await postAuth('http://localhost:8080/api/user/login', { email, password })
 
   if (!res.ok) {
     return { errors: { _form: ['Invalid email or password'] } };
