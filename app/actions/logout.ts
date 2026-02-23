@@ -8,7 +8,7 @@ export async function logout() {
   const session = cookieStore.get('session')?.value
 
   if (session) {
-    await fetch('http://localhost:4000/auth/logout', {
+    await fetch('http://localhost:4000/api/user/logout', {
       method: 'POST',
       headers: {
         Cookie: `session=${session}`,

@@ -5,7 +5,7 @@ export async function createCollection(name: string) {
     const cookieStore = await cookies()
     const session = cookieStore.get('session')?.value
     
-    const res = await fetch('http://localhost:4000/collections/create', {
+    const res = await fetch('http://localhost:4000/collections/createCollection', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

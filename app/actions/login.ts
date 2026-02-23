@@ -26,7 +26,7 @@ export async function login(state: FormState, formData: FormData): Promise<FormS
 
   const { email, password } = validatedFields.data
 
-  const res = await postAuth('http://localhost:4000/auth/login', { email, password })
+  const res = await postAuth('http://localhost:4000/api/user/login', { email, password })
 
   if (!res.ok) {
     return { errors: { _form: ['Invalid email or password'] } };
@@ -48,7 +48,6 @@ export async function login(state: FormState, formData: FormData): Promise<FormS
         path: '/',
         maxAge: 60 * 60 * 24 * 7, 
       });
-      console.log("Debug: Session cookie successfully set in Next.js");
     } else {
       console.error("Debug: Could not parse session token from header");
     }

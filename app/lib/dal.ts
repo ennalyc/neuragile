@@ -9,7 +9,7 @@ export async function verifySession() {
   if (!session) return { isAuth: false, userId: null }
 
   try {
-    const res = await fetch('http://localhost:4000/api/user', {
+    const res = await fetch('http://localhost:4000/api/user/user', {
       headers: {
         Cookie: `session=${session}`,
       },

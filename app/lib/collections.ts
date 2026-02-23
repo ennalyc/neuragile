@@ -12,7 +12,7 @@ export async function getCollection(collectionId: number) {
   if (!session) return null
 
   const res = await fetch(
-    `http://localhost:4000/collections/${collectionId}`,
+    `http://localhost:4000/api/collections/${collectionId}/getCollection`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export async function getCollections() {
   const session = await getSessionCookie()
   if (!session) return []
 
-  const res = await fetch('http://localhost:4000/collections', {
+  const res = await fetch('http://localhost:4000/api/collections/getAllCollections', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export async function addItemToCollection(collectionId: number, cardId: string) 
   const session = await getSessionCookie()
   if (!session) throw new Error('Unauthorized')
 
-  const res = await fetch(`http://localhost:4000/collections/${collectionId}/items`, {
+  const res = await fetch(`http://localhost:4000/api/collections/${collectionId}/addItem`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export async function getAllCollectedCards() {
   const session = await getSessionCookie()
   if (!session) return []
 
-  const res = await fetch('http://localhost:4000/collections/items', {
+  const res = await fetch('http://localhost:4000/api/collections/getAllItems', {
     headers: {
       'Content-Type': 'application/json',
       Cookie: `session=${session}`,
