@@ -14,6 +14,7 @@ async function postAuth(url: string, body: any) {
 }
 
 export async function signup(state: FormState, formData: FormData): Promise<FormState> {
+  console.log("ACTION EXECUTOU")
   const validatedFields = SignupFormSchema.safeParse({
     email: formData.get('email'),
     password: formData.get('password'),
