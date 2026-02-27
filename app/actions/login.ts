@@ -40,7 +40,7 @@ export async function login(state: FormState, formData: FormData): Promise<FormS
     sameSite: 'lax',
     path: '/',
     maxAge: 60 * 60,
-  })
+  });
 
   redirect('/');
 }

@@ -19,7 +19,6 @@ export async function getCollection(collectionId: number) {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name }),
       cache: 'no-store',
     }
   )
@@ -41,7 +40,6 @@ export async function getCollections() {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name }),
       cache: 'no-store',
     }
   )
@@ -59,7 +57,6 @@ export async function addItemToCollection(collectionId: number, cardId: string) 
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name }),
       cache: 'no-store',
     })
 
@@ -80,7 +77,6 @@ export async function getAllCollectedCards() {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name }),
       cache: 'no-store',
     })
 
