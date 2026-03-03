@@ -55,7 +55,7 @@ const BackCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' 
                         )}
                     </div>
 
-                    <p className={`font-bold ${s.backTitle}`}>Contexto:</p>
+                    <p className={`font-bold ${s.backTitle}`}>Context:</p>
                     <p className={`${s.backContent} text-left leading-relaxed`}>{cardData.back}</p>
                 </div>
             </div>

@@ -23,7 +23,14 @@ export default function CollectionButtonTrigger({
   onCreateCollection,
 }: Props) {
   const [isOpen, setIsOpen] = useState(false)
+  const [err, setErr] = useState(error);
+  const [msg, setMsg] = useState(message);
 
+  const handleClose = () => {
+    setIsOpen(false);
+    setMsg(""); 
+    setErr(""); 
+  }
   return (
     <>
       <div
@@ -34,16 +41,18 @@ export default function CollectionButtonTrigger({
         <p>Add to a collection</p>
       </div>
 
-      <CollectionModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        collections={collections}
-        cardId={curCard}
-        message={message}
-        error={error}
-        onAddItem={onAddItem}
-        onCreateCollection={onCreateCollection}
-      />
+      {isOpen && (
+        <CollectionModal
+          isOpen={isOpen}
+          onClose={handleClose}
+          collections={collections}
+          cardId={curCard}
+          message={message}
+          error={error}
+          onAddItem={onAddItem}
+          onCreateCollection={onCreateCollection}
+        />
+      )}
     </>
   )
 }

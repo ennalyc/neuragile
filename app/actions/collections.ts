@@ -1,11 +1,12 @@
 'use server'
 
 import { cookies } from 'next/headers'
+import { verifySession } from '../lib/dal'
 
 export async function createCollection(name: string) {
-  const token = (await cookies()).get('auth_token')?.value
-  console.log(name)
-  if (!token) {
+  const sessionToken = await verifySession()
+  
+  if (!sessionToken) {
     throw new Error('Unauthorized')
   }
 
@@ -15,7 +16,7 @@ export async function createCollection(name: string) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${sessionToken}`,
       },
       body: JSON.stringify({ name }),
       cache: 'no-store',

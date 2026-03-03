@@ -29,12 +29,6 @@ const ExploreCardsSection = () => {
     rc.relatedCP.includes(currentCard.relatedCP[0]) && rc.id !== currentCard.id
   ).slice(0, 4) : [];
 
-  const checkData = [
-    { id: 1, text: 'Worked for me', icon: <CircleCheck size={16}/> },
-    { id: 2, text: 'Struggled applying', icon: <CircleX size={16}/> },
-    { id: 3, text: 'More context needed', icon: <CircleCheck size={16}/> }
-  ]
-
   return (
     <div className="mt-8 w-full flex flex-col items-center">
       <div className="w-full justify-center max-w-7xl">
@@ -61,7 +55,7 @@ const ExploreCardsSection = () => {
                   </div>
                 ))}
                 {visibleCards.length < 1 && (
-                  <div className="h-72 w-full bg-neutral-100 rounded-xl flex justify-center items-center border border-dashed border-neutral-300">
+                  <div className="h-79 w-full bg-neutral-100 rounded-xl flex justify-center items-center border border-dashed border-neutral-300">
                     <p className="text-neutral-400">No cards in this category.</p>
                   </div>
                 )}
@@ -78,14 +72,6 @@ const ExploreCardsSection = () => {
               />
             )}
             
-            <div className="flex flex-wrap pl-24 items-end gap-x-6 gap-y-3 mt-6 max-w-100">
-              {checkData.map((check) => (
-                <div className="flex gap-2 items-center cursor-pointer text-sm text-neutral-400 hover:text-neutral-600 transition-colors" key={check.id}>
-                  {check.icon}
-                  <p className="whitespace-nowrap">{check.text}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
         </div>

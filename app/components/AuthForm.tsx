@@ -7,7 +7,6 @@ import Image from 'next/image'
 import { Mail, Key, LogIn, UserPlus } from 'lucide-react'
 
 import Logo from '@/app/assets/neuragileLogo.png'
-import { title } from 'process'
 
 type Auth = 'login' | 'signup'
 
@@ -75,6 +74,7 @@ const AuthForm = () => {
                 <button type='submit' className='cursor-pointer w-80 rounded-md bg-black text-white font-semibold py-3 flex justify-center'>
                     Continue
                 </button>
+                
                 {state?.errors?.email && <p className='text-sm text-center text-red-500'>{state.errors.email}</p>}
                 {state?.errors?._form && <p className='text-center text-sm text-red-500'>{state.errors._form}</p>}
 

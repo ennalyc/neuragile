@@ -1,6 +1,12 @@
+import { redirect } from "next/navigation"
 import AuthForm from "../../components/AuthForm"
-export default async function AuthPage() {
+import { verifySession } from "@/app/lib/dal"
 
+export default async function AuthPage() {
+  const sessionToken = await verifySession()
+  if (sessionToken.isAuth){
+    redirect('/')
+  }
   return (
     <div className="h-screen w-full flex justify-center items-center">
         <AuthForm/>

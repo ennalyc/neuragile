@@ -35,16 +35,7 @@ const FilterSection = ({activeFilter, activeNd, activeCard, setActiveFilterTagCl
                 </div>
             ))
             }
-            <div className="flex flex-row gap-3">
-            <div className="flex flex-row gap-2 items-center text-md text-neutral-400">
-                <input className="cursor-pointer h-3 w-3" type="checkbox" name="groupingType" id="Individual" />
-                <label htmlFor="Individual">Solo</label>
-            </div>
-            <div className="flex flex-row gap-2 items-center text-md text-neutral-400">
-                <input className="cursor-pointer h-3 w-3" type="checkbox" name="groupingType" id="Grupo" />
-                <label htmlFor="Grupo">Group</label>
-            </div>
-            </div>
+            
         </div>
         </div>
         <div className={`flex flex-row gap-3 ${style}`}>
