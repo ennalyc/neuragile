@@ -40,7 +40,7 @@ export default function CollectionModal({
 
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-xl w-96 relative gap-2">
+      <div className="bg-white p-6 rounded-xl w-96  relative gap-2">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-neutral-400 hover:text-black"
@@ -52,7 +52,7 @@ export default function CollectionModal({
 
         {collections.length === 0 && <p>No collections yet.</p>}
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 max-h-100 overflow-y-scroll">
             {collections.map((collection) => (
                 <div key={collection.id} className="flex flex-col gap-2">
                     <div

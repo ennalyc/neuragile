@@ -17,7 +17,7 @@ export async function getCollection(collectionId: number) {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+       Cookie: `auth_token=${token}`,
       },
       cache: 'no-store',
     }
@@ -38,7 +38,7 @@ export async function getCollections() {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        Cookie: `auth_token=${token}`,
       },
       cache: 'no-store',
     }
@@ -53,16 +53,21 @@ export async function addItemToCollection(collectionId: number, cardId: string) 
   if (!token) throw new Error('Unauthorized')
 
   const res = await fetch(`http://localhost:8080/api/collections/${collectionId}/addItem`, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        Cookie: `auth_token=${token}`,
       },
-      cache: 'no-store',
+      body: JSON.stringify({ cardId })
     })
-
+  if (res.status === 400){
+     const error = await res.json().catch(() => ({}))
+    throw new Error(error.message || 'This item is already in this collection.')
+  }
+  
   if (!res.ok) {
     const error = await res.json().catch(() => ({}))
-    throw new Error(error.message || 'Failed to add item')
+    throw new Error(error.message || 'Failed to add item.')
   }
 
   return res.json()
@@ -75,7 +80,7 @@ export async function getAllCollectedCards() {
   const res = await fetch('http://localhost:8080/api/collections/getAllItems', {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        Cookie: `auth_token=${token}`,
       },
       cache: 'no-store',
     })

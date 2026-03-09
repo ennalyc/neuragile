@@ -7,10 +7,6 @@ import MultipleTags from "@/app/components/ui/MultipleTags";
 import FrontCard from "@/app/components/cards/FrontCard";
 import BackCard from "@/app/components/cards/BackCard";
 import CollectionButton from "@/app/components/ui/CollectionButton";
-import { getCollections } from "@/app/lib/collections";
-
-import { BookMarked, CircleCheck, CircleX } from "lucide-react";
-
 
 interface CardPageProps {
   params: Promise<{id: string}>;
@@ -36,10 +32,9 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
                 <MultipleTags
                 currentCard={currentCard}
                 />
-                <ChecklistSection/>
-                <section className="w-130 my-4">
+                <section className="w-130 my-4 flex flex-col items-start gap-3">
                     <h4 className="text-xl font-bold mb-4">Related Cards</h4>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 mb-4">
                       {
                       relatedCards.length > 0 ?
                       (
@@ -59,6 +54,9 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
                       )
                     }
                     </div>
+                    <CollectionButton
+                    curId={id}
+                    />
                 </section>
               </div>
               <section className="flex flex-col items-end gap-6">
@@ -80,9 +78,6 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
                   </div>
                 </div>
                 </div>
-                <CollectionButton
-                    curId={id}
-                    />
               </section>
             </div>
           </div>

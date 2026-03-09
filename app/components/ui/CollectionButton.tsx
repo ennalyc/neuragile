@@ -27,22 +27,27 @@ export default function CollectionButton({ curId }: { curId: string }) {
 
   const handleCreateCollection = async (name: string) => {
     try {
+      setError("")
       await createCollection(name)
       setMessage(`Collection "${name}" created!`)
       await fetchCollections() 
     } catch (err: any) {
+      setMessage("")
       setError(err?.message || "Failed to create collection")
     }
   }
 
   const handleAddItem = async (collectionId: number) => {
-    try {
-      await addItemToCollection(collectionId, curId)
-      setMessage("Card added to collection successfully!")
-    } catch (err: any) {
-      setError(err?.message || "Failed to add card")
-    }
+  try {
+    setError("")
+    const res = await addItemToCollection(collectionId, curId)
+    setMessage("Card added to collection successfully!")
+  } catch (err: any) {
+    setMessage("")
+    setError(err?.message || "Failed to add card.")
   }
+}
+  
 
   return (
     <CollectionButtonTrigger

@@ -7,7 +7,7 @@ import Building2 from '@/app/assets/company.png';
 
 import { sizeConfigs } from "@/app/constants/cardSizeConfig";
 
-const BackCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' | 'big' | 'large' }) => {
+const BackCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' | 'big' | 'large' | 'extraLarge' }) => {
 
     const s = sizeConfigs[size];
 

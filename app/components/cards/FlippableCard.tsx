@@ -9,14 +9,11 @@ import Agile from '@/app/assets/agile.png';
 import Speaker2 from '@/app/assets/speaker.png';
 import Building2 from '@/app/assets/company.png';
 
-import { User } from "lucide-react";
-import Image from "next/image";
-
 import FrontCard from "./FrontCard";
 import BackCard from "./BackCard";
 import { sizeConfigs } from "@/app/constants/cardSizeConfig";
 
-const LargeCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' | 'big' | 'large' }) => {
+const LargeCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' | 'big' | 'large' | 'extraLarge'}) => {
     
     const s = sizeConfigs[size];
 

@@ -54,6 +54,24 @@ export const sizeConfigs = {
             backContent: "text-[10px]"
         },
         large: {
+            container: "h-110.25 w-80.75 rounded-4xl overflow-hidden",
+            padding: "px-8 pt-8 mb-3",
+            iconSize: 16,
+            categoryText: "text-sm",
+            illusContainer: "h-90 bottom-2",
+            kanbanImg: "h-90 bottom-24 w-full left-9 -translate-x-2",
+            speakerImg: "h-80 bottom-16 w-full left-10 -translate-x-2",
+            buildingImg: "h-90 bottom-10 w-full left-10 -translate-x-2",
+            contentBox: "h-54 bottom-2",
+            numberText: "text-6xl",
+            titleText: "text-2xl",
+            bodyText: "text-xs",
+            backHeader: "mb-2",
+            backIllustration: "h-16",
+            backTitle: "text-xl",
+            backContent: "text-[11px]"
+        },
+        extraLarge: {
             container: "h-126 w-88 rounded-4xl overflow-hidden",
             padding: "px-8 pt-8 mb-3",
             iconSize: 16,

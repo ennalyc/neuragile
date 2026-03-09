@@ -67,7 +67,7 @@ const ExploreCardsSection = () => {
             {currentCard && (
               <LargeCard
                 key={currentCard.id}
-                size="large"
+                size="extraLarge"
                 cardData={currentCard}
               />
             )}

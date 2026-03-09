@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import CollectionModal from "./ui/CollectionModal"
 import { BookMarked } from "lucide-react"
 import { Collection } from "./ui/CollectionButton"
@@ -25,6 +25,11 @@ export default function CollectionButtonTrigger({
   const [isOpen, setIsOpen] = useState(false)
   const [err, setErr] = useState(error);
   const [msg, setMsg] = useState(message);
+  
+  useEffect(() => {
+  setMsg(message)
+  setErr(error)
+}, [message, error])
 
   const handleClose = () => {
     setIsOpen(false);
@@ -35,7 +40,7 @@ export default function CollectionButtonTrigger({
     <>
       <div
         onClick={() => setIsOpen(true)}
-        className="flex gap-2 cursor-pointer flex-row text-sm text-neutral-400 hover:text-neutral-500"
+        className="flex gap-2 cursor-pointer flex-row text-md items-center text-neutral-400 hover:text-neutral-500"
       >
         <BookMarked size={16} />
         <p>Add to a collection</p>
@@ -47,8 +52,8 @@ export default function CollectionButtonTrigger({
           onClose={handleClose}
           collections={collections}
           cardId={curCard}
-          message={message}
-          error={error}
+          message={msg}
+          error={err}
           onAddItem={onAddItem}
           onCreateCollection={onCreateCollection}
         />

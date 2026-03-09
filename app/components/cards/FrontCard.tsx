@@ -5,7 +5,7 @@ import { User } from "lucide-react";
 import Image from "next/image";
 import { sizeConfigs } from '@/app/constants/cardSizeConfig';
 
-const FrontCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' | 'big' | 'large' }) => {
+const FrontCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' | 'big' | 'large' | 'extraLarge'}) => {
 
     const s = sizeConfigs[size];
 
