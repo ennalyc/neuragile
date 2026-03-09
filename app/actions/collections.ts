@@ -8,7 +8,7 @@ export async function createCollection(name: string) {
   }
   console.log(`isAuth: ${!sessionToken.isAuth}`)
   const res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_API_URL}/api/collections/createCollection`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/collections/createCollection`,
     {
       method: 'POST',
       headers: {
