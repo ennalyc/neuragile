@@ -24,7 +24,7 @@ export async function signup(state: FormState, formData: FormData): Promise<Form
   }
 
   const { email, password } = validatedFields.data
-  const res = await postAuth('http://localhost:8080/api/user/register', { email, password })
+  const res = await postAuth(`http://${process.env.NEXT_PUBLIC_API_URL}/api/user/register`, { email, password })
 
   if (res.status === 409) {
     return { errors: { email: ['Email already exists'] } }

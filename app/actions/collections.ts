@@ -1,7 +1,5 @@
 'use server'
-
 import { verifySession } from '../lib/dal'
-
 export async function createCollection(name: string) {
   const sessionToken = await verifySession()
   
@@ -10,7 +8,7 @@ export async function createCollection(name: string) {
   }
   console.log(`isAuth: ${!sessionToken.isAuth}`)
   const res = await fetch(
-    'http://localhost:8080/api/collections/createCollection',
+    `http://${process.env.NEXT_PUBLIC_API_URL}/api/collections/createCollection`,
     {
       method: 'POST',
       headers: {
