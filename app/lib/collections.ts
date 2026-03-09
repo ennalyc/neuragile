@@ -13,7 +13,7 @@ export async function getCollection(collectionId: number) {
   if (!token) return null
   
   const res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_API_URL}/api/collections/${collectionId}/getCollection`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/collections/${collectionId}/getCollection`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ export async function getCollections() {
   const token = await getSessionCookie()
   if (!token) return []
 
-  const res = await fetch(`https://${process.env.NEXT_PUBLIC_API_URL}/api/collections/getAllCollections`, 
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/collections/getAllCollections`, 
     {
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export async function addItemToCollection(collectionId: number, cardId: string) 
   const token = await getSessionCookie()
   if (!token) throw new Error('Unauthorized')
 
-  const res = await fetch(`https://${process.env.NEXT_PUBLIC_API_URL}/api/collections/${collectionId}/addItem`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/collections/${collectionId}/addItem`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ export async function getAllCollectedCards() {
   const token = await getSessionCookie()
   if (!token) return []
 
-const res = await fetch(`https://${process.env.NEXT_PUBLIC_API_URL}/api/collections/getAllItems`, {
+const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/collections/getAllItems`, {
       headers: {
         'Content-Type': 'application/json',
         Cookie: `auth_token=${token}`,
