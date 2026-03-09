@@ -62,7 +62,7 @@ export async function addItemToCollection(collectionId: number, cardId: string) 
     })
   if (res.status === 400){
      const error = await res.json().catch(() => ({}))
-    throw new Error(error.message || 'This item is already in this collection.')
+    throw new Error('This item is already in this collection.')
   }
   
   if (!res.ok) {
