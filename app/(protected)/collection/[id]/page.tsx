@@ -12,7 +12,7 @@ const CollectionPage =  async ({params}: {params: CollectionProps}) => {
     
     const collectionId = await params
     const myCollection = await getCollection(Number(collectionId.id))
-    const collectionCardIds = myCollection.items.map(item => Number(item.cardId))
+    const collectionCardIds = myCollection.items.map((item: { cardId: any }) => Number(item.cardId))
     const allCollectionCards = data.filter(card => collectionCardIds.includes(card.id))
     return (
     <div className='mt-8 w-full flex flex-col items-center'>

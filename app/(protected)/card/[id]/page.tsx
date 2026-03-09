@@ -8,8 +8,8 @@ import FrontCard from "@/app/components/cards/FrontCard";
 import BackCard from "@/app/components/cards/BackCard";
 import CollectionButton from "@/app/components/ui/CollectionButton";
 
-interface CardPageProps {
-  params: Promise<{id: string}>;
+type CardPageProps = {
+  id: string
 }
 
 const CardPage = async ({params}: {params: CardPageProps}) => {
