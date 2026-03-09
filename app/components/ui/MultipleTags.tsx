@@ -35,7 +35,7 @@ const MultipleTags = ({currentCard}: {currentCard: Card}) => {
         <Tag
         state={true}
         text={currentCard.category}
-        style={currentCard.category === "Agile Practices" ? 'bg-lime-500 text-white' : currentCard.category === 'Communication and Social Interaction' ? 'bg-sky-500 text-white' : 'bg-pink-500'}
+        style={currentCard.category === "Agile Practices" ? 'bg-lime-500 text-white' : currentCard.category === 'Communication and Social Interaction' ? 'bg-sky-500 text-white' : 'bg-pink-500 text-white'}
         />
     </div>
   )
