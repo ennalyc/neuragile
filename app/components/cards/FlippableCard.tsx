@@ -1,14 +1,6 @@
 'use client'
 import { useState } from "react";
 
-import KanBan from '@/app/assets/agilekanban.png';
-import Speaker from '@/app/assets/communication.png';
-import Building from '@/app/assets/companybuilding.png';
-
-import Agile from '@/app/assets/agile.png';
-import Speaker2 from '@/app/assets/speaker.png';
-import Building2 from '@/app/assets/company.png';
-
 import FrontCard from "./FrontCard";
 import BackCard from "./BackCard";
 import { sizeConfigs } from "@/app/constants/cardSizeConfig";
@@ -21,23 +13,17 @@ const LargeCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium'
         {
             type: "Agile Practices",
             color: "bg-gradient-to-br from-[#B3E56D] to-[#51983A]",
-            illustration: KanBan, 
-            backIllustration: Agile,
-            imgClass: s.kanbanImg
+           
         },
         {
             type: "Communication and Social Interaction",
             color: "bg-gradient-to-br from-[#0097FE] to-[#0D5AA8]",
-            illustration: Speaker, 
-            backIllustration: Speaker2,
-            imgClass: s.speakerImg
+            
         },
         {
             type: "Leadership and Organization",
             color: "bg-gradient-to-br from-[#E4509C] to-[#C91572]",
-            illustration: Building,
-            backIllustration: Building2,
-            imgClass: s.buildingImg
+           
         }
     ];
 
