@@ -36,9 +36,9 @@ const ExploreCardsSection = () => {
   const m = sizeConfigs
 
   return (
-    <div className="mt-8 mb-8 w-full flex flex-col items-center px-4 md:px-0">
+    <div className="mt-8 md:mb-8 w-full flex flex-col items-center px-4 md:px-0">
       <div className="w-full max-w-7xl">        
-       <div className="flex flex-col gap-3 justify-between w-full md-gap-0 md:flex-row">
+       <div className="flex flex-col gap-3 justify-between w-full md:gap-0 md:flex-row">
          <div className="flex flex-col md:max-w-2xl gap-8 items-start">
           <div className="flex flex-row md:flex-col md:gap-3">
             <h3 className='text-2xl md:mb-6 md:text-3xl font-bold text-left w-full'>Explore Cards</h3>
@@ -52,8 +52,8 @@ const ExploreCardsSection = () => {
           style=""
         />
           </div>
-          <div className="md:max-w-4xl flex flex-col">
-            <div className="flex md:flex-wrap gap-3 overflow-y-auto md:h-108 content-start no-scrollbar">
+          <div className="w-screen md:w-full pr-8 md:pr-0 md:max-w-4xl flex flex-col">
+            <div className="flex overflow-x-scroll md:overflow-x-hidden md:flex-wrap gap-3 overflow-y-auto md:h-108 content-start no-scrollbar">
               {visibleCards.map((card) => (
                 <div key={card.id} onClick={() => setClickedCard(card.id)} className="cursor-pointer shrink-0">
                   <SmallCard size="xs" state={clickedCard === card.id} cardData={card} />
