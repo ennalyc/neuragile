@@ -22,17 +22,17 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
 
   
   return (
-    <div className="mt-8 px-30 flex justify-center items-center mb-16">
+    <div className="mt-8 px-4 md:px-30 flex justify-center items-center mb-16">
       {
         currentCard && (
           <div className="max-w-7xl w-full">
             <h3 className="text-3xl font-bold mb-4">{currentCard.front[0].title}</h3>
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-col md:flex-row justify-between">
               <div>
                 <MultipleTags
                 currentCard={currentCard}
                 />
-                <section className="w-130 my-4 flex flex-col items-start gap-3">
+                <section className="max-w-100 md:max-w-full md:w-130 my-4 flex flex-col items-start gap-3">
                     <h4 className="text-xl font-bold mb-4">Related Cards</h4>
                     <div className="flex flex-wrap gap-3 mb-4">
                       {
@@ -60,7 +60,7 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
                 </section>
               </div>
               <section className="flex flex-col items-end gap-6">
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-col md:flex-row gap-2">
                   <div className="flex flex-col gap-3 items-start">
                   <div className="transition-transform duration-300 hover:scale-[1.02] mb-4">
                     <FrontCard
