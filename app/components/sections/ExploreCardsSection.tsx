@@ -36,12 +36,13 @@ const ExploreCardsSection = () => {
   const m = sizeConfigs
 
   return (
-  <div className="mt-8 mb-8 w-full flex flex-col items-center px-4 md:px-0">
-    <div className="w-full max-w-7xl">
-      
-      <div className="flex flex-col mb-8">
-        <h3 className="text-2xl md:text-3xl font-bold mb-6">Explore Cards</h3>
-        <FilterSection
+    <div className="mt-8 mb-8 w-full flex flex-col items-center px-4 md:px-0">
+      <div className="w-full max-w-7xl">        
+       <div className="flex flex-col gap-3 justify-between w-full md-gap-0 md:flex-row">
+         <div className="flex flex-col md:max-w-2xl gap-8 items-start">
+          <div className="flex flex-row md:flex-col md:gap-3">
+            <h3 className='text-2xl md:mb-6 md:text-3xl font-bold text-left w-full'>Explore Cards</h3>
+            <FilterSection
           activeCard={activeCardButton}
           activeFilter={activeFilterTagClicked}
           activeNd={activeNdTagClicked}
@@ -50,40 +51,60 @@ const ExploreCardsSection = () => {
           setActiveNdTagClicked={setActiveNdTagClicked}
           style=""
         />
-      </div>
-
-      <div className="flex flex-col md:flex-row w-full gap-8 items-start">
-        
-        <div className="w-full md:w-1/2 flex flex-col gap-6">
-          <div className="flex overflow-x-scroll md:flex-wrap gap-3 md:h-125 overflow-y-auto pr-2 content-start no-scrollbar">
-            {visibleCards.map((card) => (
-              <div key={card.id} onClick={() => setClickedCard(card.id)} className="cursor-pointer shrink-0">
-                <SmallCard size="xs" state={clickedCard === card.id} cardData={card} />
-              </div>
-            ))}
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 flex flex-col gap-6">
-          <div className="flex justify-center md:justify-end">
-            {currentCard ? (
-              <LargeCard key={currentCard.id} size={isMobile ? "medium" : "extraLarge"} cardData={currentCard} />
-            ) : (
-              <div className={`${isMobile ? m.small.container : m.extraLarge.container} text-neutral-400 bg-neutral-200 rounded-4xl flex justify-center items-center text-center px-8`}>
-                <p>Pick a card to see details.</p>
-              </div>
-            )}
+          <div className="md:max-w-4xl flex flex-col">
+            <div className="flex md:flex-wrap gap-3 overflow-y-auto md:h-108 content-start no-scrollbar">
+              {visibleCards.map((card) => (
+                <div key={card.id} onClick={() => setClickedCard(card.id)} className="cursor-pointer shrink-0">
+                  <SmallCard size="xs" state={clickedCard === card.id} cardData={card} />
+                </div>
+              ))}
+              {visibleCards.length < 1 && (
+                <div className="h-40 w-full bg-neutral-100 rounded-xl flex justify-center items-center border border-dashed border-neutral-300">
+                  <p className="text-neutral-400">No cards in this category.</p>
+                </div>
+              )}
+            </div>
           </div>
-          
-          {/* Related Cards Section */}
-          <section className="flex flex-col items-center md:items-end">
-             {/* ... your related cards code ... */}
-          </section>
-        </div>
+       </div>
 
+          <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <div className="flex justify-center lg:justify-end">
+              {currentCard ? (
+                <LargeCard
+                  key={currentCard.id}
+                  size={isMobile ? "medium" : "extraLarge"}
+                  cardData={currentCard}
+                />
+              ) : (
+                <div className={`${isMobile ? m.small.container : m.extraLarge.container} text-neutral-400 bg-neutral-200 rounded-4xl px-8 flex justify-center items-center text-center`}>
+                  <p>Pick a card to see details.</p>
+                </div>
+              )}
+            </div>
+
+            <section className="flex flex-col items-center lg:items-end">
+              <div className={`${isMobile ? 'w-40' : 'w-88'} justify-end`}>
+                <h4 className="text-md font-bold mb-4">Related Cards</h4>
+                <div className="flex flex-row overflow-x-auto gap-3 pb-4 no-scrollbar">
+                  {relatedCards.length > 0 ? (
+                    relatedCards.map((rc) => (
+                      <div onClick={() => setClickedCard(rc.id)} className="grayscale hover:grayscale-0 transition-all shrink-0 cursor-pointer" key={rc.id}>
+                        <SmallCard state={false} cardData={rc} size="xxs" />
+                      </div>
+                    ))
+                  ) : (
+                    <p className="text-neutral-400 text-sm">No related cards found.</p>
+                  )}
+                </div>
+              </div>
+            </section>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-)}
+  )
+}
 
-export default ExploreCardsSection;
+export default ExploreCardsSection

@@ -63,7 +63,7 @@ const FilterSection = ({
 
                 <div className={`${style} flex flex-wrap md:flex-row gap-3`}>
                     {cardTypes.map((ct) => (
-                        <div key={ct.id} onClick={() => setActiveCardButton(activeCard === ct.title ? null : ct.title)}>
+                        <div className="max-w-56" key={ct.id} onClick={() => setActiveCardButton(activeCard === ct.title ? null : ct.title)}>
                             <CustomButton
                                 state={ct.title === activeCard}
                                 text={ct.title}
