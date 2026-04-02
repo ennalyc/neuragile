@@ -34,7 +34,7 @@ const FilterSection = ({
                 />
             </div>
 
-            <div className={`${isOpen ? 'flex' : 'hidden'} md:flex flex-col gap-1`}>
+            <div className={`${isOpen ? 'flex flex-col' : 'hidden'} md:flex flex-col gap-1`}>
                 <div className="flex md:flex-row flex-wrap gap-3">
                     {filterTags.map((ft) => (
                         <div key={ft.id} onClick={() => setActiveFilterTagClicked(activeFilter === ft.title ? null : ft.title)}>

@@ -40,7 +40,7 @@ const ExploreCardsSection = () => {
       <div className="w-full max-w-7xl">        
        <div className="flex flex-col gap-3 justify-between w-full md:gap-0 md:flex-row">
          <div className="flex flex-col md:max-w-2xl gap-8 items-start">
-          <div className="flex flex-row md:flex-col md:gap-3">
+          <div className="flex flex-row w-full md:flex-col md:gap-3">
             <h3 className='text-2xl md:mb-6 md:text-3xl font-bold text-left w-full'>Explore Cards</h3>
             <FilterSection
           activeCard={activeCardButton}
