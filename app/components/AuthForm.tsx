@@ -44,7 +44,7 @@ const AuthForm = () => {
     }
     
     return (
-        <div className='flex w-80 flex-col gap-3'>
+        <div className='flex w-56 md:w-80 flex-col gap-3'>
             <Image src={Logo} alt='logo' className='w-full object-contain'/>
             <div className='w-full p-1 gap-2 bg-black flex flex-row justify-between rounded-3xl'>
                 {
@@ -71,7 +71,7 @@ const AuthForm = () => {
                         <input type='password' className='focus:outline-none focus:text-neutral-500 w-full' id="password" name="password" placeholder="Write your password" />
                     </div>
                 </div>
-                <button type='submit' className='cursor-pointer w-80 rounded-md bg-black text-white font-semibold py-3 flex justify-center'>
+                <button type='submit' className='cursor-pointer w-56 md:w-80 rounded-md bg-black text-white font-semibold py-3 flex justify-center'>
                     Continue
                 </button>
                 

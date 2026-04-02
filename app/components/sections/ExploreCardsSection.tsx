@@ -1,21 +1,25 @@
 'use client'
 
-import { useState } from "react"
-import { filterTags, ndTags, cardTypes } from "@/app/constants/filteringData"
-import Tag from "../ui/Tag"
-import CustomButton from "../ui/CustomButton"
+import { useState, useEffect } from "react"
 import { data } from "@/app/constants/cardData"
 import SmallCard from "../cards/SmallCard"
-import { Card } from "@/app/types/card"
 import LargeCard from "../cards/FlippableCard"
 import FilterSection from "./FilterSection"
-import { CircleCheck, CircleX, CirclePlus } from "lucide-react"
+import { sizeConfigs } from "@/app/constants/cardSizeConfig"
 
 const ExploreCardsSection = () => {
   const [activeFilterTagClicked, setActiveFilterTagClicked] = useState<null | string>(null)
   const [activeNdTagClicked, setActiveNdTagClicked] = useState<null | string>(null)
   const [activeCardButton, setActiveCardButton] = useState<null | string>(null)
-  const [clickedCard, setClickedCard] = useState<null | number>(1)
+  const [clickedCard, setClickedCard] = useState<null | number>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 600)
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const visibleCards = data.filter((card) => {
     const matchesFilter = !activeFilterTagClicked || card.relatedCP.includes(activeFilterTagClicked);
@@ -29,70 +33,57 @@ const ExploreCardsSection = () => {
     rc.relatedCP.includes(currentCard.relatedCP[0]) && rc.id !== currentCard.id
   ).slice(0, 4) : [];
 
+  const m = sizeConfigs
+
   return (
-    <div className="mt-8 w-full flex flex-col items-center">
-      <div className="w-full justify-center max-w-7xl">
-        <h3 className='text-3xl font-bold mb-8'>Explore Cards</h3>
-        
-        <div className="flex flex-col lg:flex-row items-start justify-between xl:gap-20">
-          
-          <div className="w-full lg:w-auto lg:max-w-145 flex flex-col items-center lg:items-start">
-            <FilterSection
-              activeCard={activeCardButton}
-              activeFilter={activeFilterTagClicked}
-              activeNd={activeNdTagClicked}
-              setActiveCardButton={setActiveCardButton}
-              setActiveFilterTagClicked={setActiveFilterTagClicked}
-              setActiveNdTagClicked={setActiveNdTagClicked}
-              style=""
-            />
-            
-            <div className="mt-8 w-full">
-              <div className="flex flex-wrap gap-3 overflow-y-auto h-80 pr-2 content-start justify-center lg:justify-start">
-                {visibleCards.map((card) => (
-                  <div key={card.id} onClick={() => setClickedCard(card.id)} className="cursor-pointer">
-                    <SmallCard size="xs" state={clickedCard === card.id} cardData={card} />
-                  </div>
-                ))}
-                {visibleCards.length < 1 && (
-                  <div className="h-79 w-full bg-neutral-100 rounded-xl flex justify-center items-center border border-dashed border-neutral-300">
-                    <p className="text-neutral-400">No cards in this category.</p>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-auto flex flex-col items-end shrink-0">
-            {currentCard && (
-              <LargeCard
-                key={currentCard.id}
-                size="extraLarge"
-                cardData={currentCard}
-              />
-            )}
-            
-          </div>
-
-        </div>
+  <div className="mt-8 mb-8 w-full flex flex-col items-center px-4 md:px-0">
+    <div className="w-full max-w-7xl">
+      
+      <div className="flex flex-col mb-8">
+        <h3 className="text-2xl md:text-3xl font-bold mb-6">Explore Cards</h3>
+        <FilterSection
+          activeCard={activeCardButton}
+          activeFilter={activeFilterTagClicked}
+          activeNd={activeNdTagClicked}
+          setActiveCardButton={setActiveCardButton}
+          setActiveFilterTagClicked={setActiveFilterTagClicked}
+          setActiveNdTagClicked={setActiveNdTagClicked}
+          style=""
+        />
       </div>
 
-      <section className="w-full max-w-7xl mt-8 mb-16">
-        <h4 className="text-2xl font-bold mb-8">Related Cards</h4>
-        <div className="flex flex-row overflow-x-auto gap-6 pb-6 no-scrollbar">
-          {relatedCards.length > 0 ? (
-            relatedCards.map((rc) => (
-              <div className="grayscale hover:grayscale-0 transition-all shrink-0" key={rc.id}>
-                <LargeCard cardData={rc} size="big" />
+      <div className="flex flex-col md:flex-row w-full gap-8 items-start">
+        
+        <div className="w-full md:w-1/2 flex flex-col gap-6">
+          <div className="flex overflow-x-scroll md:flex-wrap gap-3 md:h-125 overflow-y-auto pr-2 content-start no-scrollbar">
+            {visibleCards.map((card) => (
+              <div key={card.id} onClick={() => setClickedCard(card.id)} className="cursor-pointer shrink-0">
+                <SmallCard size="xs" state={clickedCard === card.id} cardData={card} />
               </div>
-            ))
-          ) : (
-            <p className="text-neutral-400 text-center mt-2 w-full text-sm">There's no related card.</p>
-          )}
+            ))}
+          </div>
         </div>
-      </section>
-    </div>
-  )
-}
 
-export default ExploreCardsSection
+        <div className="w-full md:w-1/2 flex flex-col gap-6">
+          <div className="flex justify-center md:justify-end">
+            {currentCard ? (
+              <LargeCard key={currentCard.id} size={isMobile ? "medium" : "extraLarge"} cardData={currentCard} />
+            ) : (
+              <div className={`${isMobile ? m.small.container : m.extraLarge.container} text-neutral-400 bg-neutral-200 rounded-4xl flex justify-center items-center text-center px-8`}>
+                <p>Pick a card to see details.</p>
+              </div>
+            )}
+          </div>
+          
+          {/* Related Cards Section */}
+          <section className="flex flex-col items-center md:items-end">
+             {/* ... your related cards code ... */}
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+)}
+
+export default ExploreCardsSection;

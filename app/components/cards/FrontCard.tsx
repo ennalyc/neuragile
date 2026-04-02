@@ -12,21 +12,18 @@ const FrontCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium'
     const cardDetails = [
         {
             type: "Agile Practices",
-            color: "bg-gradient-to-br from-[#B3E56D] to-[#51983A]",
+            color: "bg-linear-to-br bg-linear-45 from-[#B3E56D] to-[#386B28]",
             illustration: KanBan, 
-            imgClass: s.kanbanImg
         },
         {
             type: "Communication and Social Interaction",
-            color: "bg-gradient-to-br from-[#0097FE] to-[#0D5AA8]",
+            color: "bg-linear-to-br bg-linear-45 from-[#0097FE] to-[#0D5AA8]",
             illustration: Speaker, 
-            imgClass: s.speakerImg
         },
         {
             type: "Leadership and Organization",
-            color: "bg-gradient-to-br from-[#E4509C] to-[#C91572]",
+            color: "bg-linear-to-br bg-linear-45 from-[#E4509C] to-[#C91572]",
             illustration: Building,
-            imgClass: s.buildingImg
         }
     ];
 
@@ -47,21 +44,12 @@ const FrontCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium'
                     <User size={s.iconSize} />
                 </div>
 
-                <div className="relative w-full flex-1">
-                    <div className={`w-full ${s.illusContainer} absolute top-0 left-0`}>
-                        {activeDetail?.illustration && (
-                            <Image
-                                src={activeDetail.illustration}
-                                alt="illustration"
-                                className={`absolute object-contain object-bottom ${activeDetail.imgClass}`}
-                            />
-                        )}
-                    </div>
+                <div className="relative w-full flex h-98">
 
                     <div className={`w-full ${s.contentBox} absolute bottom-0`}>
                         {cardData.front.map((dt: any, index: number) => (
                             <div key={index} className="flex flex-col items-center justify-center gap-1 px-8">
-                                <div className="flex flex-row ml-2 gap-3 font-bold text-white items-center justify-center">
+                                <div className="flex w-full flex-row ml-2 gap-3 font-bold text-white items-center">
                                     <p className={s.numberText}>{dt.cardNum}</p>
                                     <p className={`${getDynamicFontSize(dt.title, s.titleText)} w-1/2 leading-tight text-left`}>{dt.title}</p>
                                 </div>

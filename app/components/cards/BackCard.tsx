@@ -16,19 +16,16 @@ const BackCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' 
             type: "Agile Practices",
             color: "bg-gradient-to-br from-[#B3E56D] to-[#51983A]",
             backIllustration: Agile,
-            imgClass: s.kanbanImg
         },
         {
             type: "Communication and Social Interaction",
             color: "bg-gradient-to-br from-[#0097FE] to-[#0D5AA8]",
             backIllustration: Speaker2,
-            imgClass: s.speakerImg
         },
         {
             type: "Leadership and Organization",
             color: "bg-gradient-to-br from-[#E4509C] to-[#C91572]",
             backIllustration: Building2,
-            imgClass: s.buildingImg
         }
     ];
 
@@ -44,17 +41,7 @@ const BackCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' 
                     <p className={`${s.categoryText} font-medium`}>{cardData.category}</p>
                 </div>
 
-                <div className="flex flex-col items-center px-8 gap-2 mt-1">
-                    <div className="w-full flex justify-center">
-                        {activeDetail?.backIllustration && (
-                            <Image 
-                                className={`${s.backIllustration} w-auto object-contain`} 
-                                src={activeDetail.backIllustration} 
-                                alt="category-icon" 
-                            />
-                        )}
-                    </div>
-
+                <div className="flex flex-col items-center px-8 gap-2 mt-8">
                     <p className={`font-bold ${s.backTitle}`}>Context:</p>
                     <p className={`${s.backContent} text-left leading-relaxed`}>{cardData.back}</p>
                 </div>

@@ -15,4 +15,4 @@ export type Card = {
 
 export type CardSize = 'small' | 'medium' | 'big' | 'large';
 
-export type SmallCardSize = 'xs' | 'small';
+export type SmallCardSize = 'xxs'| 'xs' | 'small' | 'medium';

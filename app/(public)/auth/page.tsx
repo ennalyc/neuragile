@@ -8,7 +8,7 @@ export default async function AuthPage() {
     redirect('/')
   }
   return (
-    <div className="h-screen w-full flex justify-center items-center">
+    <div className="w-full min-h-150 max-h-dvh flex justify-center items-center">
         <AuthForm/>
     </div>
   )

@@ -1,6 +1,7 @@
 'use client'
 import { useState, ChangeEvent, FormEvent } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
+import { Send } from "lucide-react"
 
 const CustomInput = () => {
     const searchParams = useSearchParams();
@@ -26,7 +27,7 @@ const CustomInput = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex items-center gap-3">
             <input 
                 onChange={handleChange} 
                 value={typing} 
