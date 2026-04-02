@@ -24,19 +24,21 @@ const SearchClient = ({ initialResults, query }: SearchClientProps) => {
     });
 
     return (
-        <div className="flex px-30 justify-center mt-8">
+        <div className="flex px-4 md:px-30 justify-center mt-8">
            <div className="w-full max-w-7xl">
-             <h1 className="text-2xl mb-6"><strong>Results for:</strong> {query}</h1>
+             <div className="flex flex-row md:flex-col justify-between">
+                <h1 className="text-2xl mb-6"><strong>Results for:</strong> {query}</h1>
             
-            <FilterSection
-              activeCard={activeCardButton}
-              activeFilter={activeFilterTagClicked}
-              activeNd={activeNdTagClicked}
-              setActiveCardButton={setActiveCardButton}
-              setActiveFilterTagClicked={setActiveFilterTagClicked}
-              setActiveNdTagClicked={setActiveNdTagClicked}
-              style="hidden"
-            />
+                <FilterSection
+                activeCard={activeCardButton}
+                activeFilter={activeFilterTagClicked}
+                activeNd={activeNdTagClicked}
+                setActiveCardButton={setActiveCardButton}
+                setActiveFilterTagClicked={setActiveFilterTagClicked}
+                setActiveNdTagClicked={setActiveNdTagClicked}
+                style="hidden"
+                />
+             </div>
 
             <div className="flex flex-wrap gap-4 mt-8">
                 {filteredResults.length > 0 ? (

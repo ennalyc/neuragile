@@ -25,7 +25,7 @@ const FilterSection = ({
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <section className='flex flex-wrap md:flex-col gap-2'>
+        <section className='flex relative flex-wrap md:flex-col gap-2'>
             <div className="md:hidden hover:text-neutral-500 text-neutral-400 p-2">
                 <Filter 
                     className="cursor-pointer" 
@@ -34,7 +34,7 @@ const FilterSection = ({
                 />
             </div>
 
-            <div className={`${isOpen ? 'flex flex-col' : 'hidden'} md:flex flex-col gap-1`}>
+            <div className={`${isOpen ? 'flex flex-col absolute top-10 right-0 z-50 bg-white p-4 shadow-xl border border-neutral-100 rounded-xl w-[90vw]' : 'hidden'} md:flex flex-col gap-1`}>
                 <div className="flex md:flex-row flex-wrap gap-3">
                     {filterTags.map((ft) => (
                         <div key={ft.id} onClick={() => setActiveFilterTagClicked(activeFilter === ft.title ? null : ft.title)}>

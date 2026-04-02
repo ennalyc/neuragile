@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, ChangeEvent, FormEvent } from "react"
+import { useState, ChangeEvent, FormEvent, useEffect } from "react"
+import { sizeConfigs } from "@/app/constants/cardSizeConfig"
 import { ChatMessage } from "@/app/types/message"
 import { data } from "@/app/constants/cardData"
 import Message from "./Message"
@@ -16,6 +17,17 @@ export default function ChatBoard() {
     const [isLoading, setIsLoading] = useState(false)
     const [selectedCard, setSelectedCard] = useState<Card | null>(null)
     const [activeJustification, setActiveJustification] = useState('')
+
+     const [isMobile, setIsMobile] = useState(false)
+    
+      useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 600)
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+      }, [])
+    
+    const m = sizeConfigs
 
     const isEmpty = messages.length === 0
 
@@ -69,9 +81,9 @@ export default function ChatBoard() {
     
     return (
         <div className="md:px-24 mt-8 mb-8 w-full flex flex-col items-center">
-            <div className="w-full max-w-7xl">
-                <div className="flex gap-8 flex-row justify-between items-start">
-                    <div className="flex w-2/3 flex-col">
+            <div className="w-full px-4 md:px-0 max-w-7xl">
+                <div className="flex gap-8 flex-col md:flex-row justify-center md:justify-between items-start">
+                    <div className="flex w-full md:w-2/3 flex-col">
                         <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">Chat</h3>
                         <div className='h-126 w-full bg-neutral-100 border flex flex-col justify-between items-center border-neutral-200 rounded-xl p-4'>
                             <div className="w-full flex-1 overflow-y-auto flex flex-col gap-4">
@@ -154,12 +166,12 @@ export default function ChatBoard() {
                         <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">Card</h3>
                         <LargeCard
                         cardData={selectedCard}
-                        size="extraLarge"
+                        size={isMobile ? "large" : "extraLarge"}
                         />
                     </div>): (
                         <div className="flex flex-col w-1/3">
                             <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">Card</h3>
-                            <div className='h-126 w-88 text-neutral-400 bg-neutral-200 rounded-4xl px-8 flex justify-center items-center text-center'>
+                            <div className={`${isMobile ? m.large.container : m.extraLarge.container} text-neutral-400 bg-neutral-200 rounded-4xl px-8 flex justify-center items-center text-center`}>
                                 <p>No card selected.</p>
                             </div>
                         </div>

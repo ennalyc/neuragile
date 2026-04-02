@@ -17,7 +17,7 @@ const CollectionPage =  async ({params}: {params: CollectionProps}) => {
     return (
     <div className='mt-8 w-full flex flex-col items-center'>
         <div className='w-full justify-center max-w-7xl'>
-            <div className='flex  mb-8 flex-row gap-x-2 items-center'>
+            <div className='flex mb-8 flex-row gap-x-2 items-center'>
                 <BackButton/>
                 <h3 className='text-3xl font-bold'>{myCollection.name}</h3>
             </div>

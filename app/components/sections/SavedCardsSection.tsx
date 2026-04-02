@@ -18,7 +18,7 @@ const SavedCardsSection = async () => {
 
                         </div>
                     ):(
-                        <div className="flex flex-wrap gap-3 overflow-y-auto h-100 pr-2 content-start justify-center lg:justify-start">
+                        <div className="flex flex-row md:flex-wrap overflow-x-auto gap-3 overflow-y-auto md:h-100 pr-2 content-start justify-start">
                             {
                                 cards.map((card: any) => {
                                 const myCard = data.find(c => c.id === card.id)
