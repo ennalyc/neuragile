@@ -52,7 +52,7 @@ const ExploreCardsSection = () => {
           style=""
         />
           </div>
-          <div className="w-full pr-3 md:pr-0 md:max-w-4xl flex flex-col">
+          <div className="w-full md:pr-0 md:max-w-4xl flex flex-col">
             <div className="flex overflow-x-scroll md:overflow-x-hidden md:flex-wrap gap-3 overflow-y-auto md:h-108 content-start no-scrollbar">
               {visibleCards.map((card) => (
                 <div key={card.id} onClick={() => setClickedCard(card.id)} className="cursor-pointer shrink-0">
