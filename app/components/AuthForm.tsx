@@ -1,4 +1,5 @@
 'use client'
+import {useTranslations} from 'next-intl';
 import { useActionState, useState } from 'react'
 import { login } from '../actions/login'
 import { signup } from "../actions/signup"
@@ -11,6 +12,7 @@ import Logo from '@/app/assets/neuragileLogo.png'
 type Auth = 'login' | 'signup'
 
 const AuthForm = () => {
+    const auth = useTranslations('auth');
     const [signupMode, setSignupMode] = useState<Auth>('login')
 
     const [state, action, pending] = useActionState(async (prevState: any, formData: FormData) => {
@@ -22,13 +24,13 @@ const AuthForm = () => {
     const modeBttn = [
         {
             id: 1,
-            title: 'Login',
+            title: auth("buttons.signin"),
             icon: <LogIn size={24}/>,
             mode: 'login'
         },
         {
             id: 2,
-            title: 'Sign-up',
+            title: auth("buttons.signup"),
             icon: <UserPlus  size={24}/>,
             mode: 'signup'
         }
@@ -61,25 +63,24 @@ const AuthForm = () => {
                     <Mail size={16}/>
                     <div className='w-full'>
                         <label className='focus:text-neu' htmlFor="email"></label>
-                        <input className='focus:outline-none focus:text-neutral-500 w-full' id="email" name="email" placeholder="Write your email" />
+                        <input className='focus:outline-none focus:text-neutral-500 w-full' id="email" name="email" placeholder={auth("form.email.placeholder")} />
                     </div>
                 </div>
                 <div className='w-full rounded-md bg-neutral-100 border border-neutral-300 text-neutral-400 flex flex-row gap-3 items-center py-3 pl-4 pr-2'>
                     <Key size={16}/>
                     <div className='w-fuçç'>
                         <label className='focus:text-neu' htmlFor="password"></label>
-                        <input type='password' className='focus:outline-none focus:text-neutral-500 w-full' id="password" name="password" placeholder="Write your password" />
+                        <input type='password' className='focus:outline-none focus:text-neutral-500 w-full' id="password" name="password" placeholder={auth("form.password.placeholder")} />
                     </div>
                 </div>
                 <button type='submit' className='cursor-pointer w-56 md:w-80 rounded-md bg-black text-white font-semibold py-3 flex justify-center'>
-                    Continue
+                    {auth("form.button")}
                 </button>
                 
                 {state?.errors?.email && <p className='text-sm text-center text-red-500'>{state.errors.email}</p>}
                 {state?.errors?._form && <p className='text-center text-sm text-red-500'>{state.errors._form}</p>}
 
             </form>
-            <p className='text-neutral-300 text-sm text-center'>You're currently {signupMode === 'login' ? 'logging in' : 'signing up'}.</p>
         </div>
     )
 }

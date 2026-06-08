@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import CollectionModal from "./ui/CollectionModal"
 import { BookMarked } from "lucide-react"
 import { Collection } from "./ui/CollectionButton"
+import { useTranslations } from "next-intl"
 
 interface Props {
   collections: Collection[]
@@ -36,6 +37,9 @@ export default function CollectionButtonTrigger({
     setMsg(""); 
     setErr(""); 
   }
+
+  const t = useTranslations()
+
   return (
     <>
       <div
@@ -43,7 +47,7 @@ export default function CollectionButtonTrigger({
         className="flex gap-2 cursor-pointer flex-row text-md items-center text-neutral-400 hover:text-neutral-500"
       >
         <BookMarked size={16} />
-        <p>Add to a collection</p>
+        <p>{t("auth.add")}</p>
       </div>
 
       {isOpen && (

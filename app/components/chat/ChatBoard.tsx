@@ -3,15 +3,18 @@
 import { useState, ChangeEvent, FormEvent, useEffect } from "react"
 import { sizeConfigs } from "@/app/constants/cardSizeConfig"
 import { ChatMessage } from "@/app/types/message"
-import { data } from "@/app/constants/cardData"
+import { useLocalizedCards } from "@/app/hooks/useLocalizedCards"
 import Message from "./Message"
 import { sendMessage } from "@/app/actions/chat"
 import { Send } from "lucide-react"
 import { Card } from "@/app/types/card"
 import LargeCard from "../cards/FlippableCard"
 import { CardMatch } from "@/app/types/message"
+import { useTranslations } from "next-intl"
 
 export default function ChatBoard() {
+    const t = useTranslations("ChatPage")
+    const data = useLocalizedCards()
     const [input, setInput] = useState('')
     const [messages, setMessages] = useState<ChatMessage[]>([])
     const [isLoading, setIsLoading] = useState(false)
@@ -84,13 +87,13 @@ export default function ChatBoard() {
             <div className="w-full px-4 md:px-0 max-w-7xl">
                 <div className="flex gap-8 flex-col md:flex-row justify-center md:justify-between items-start">
                     <div className="flex w-full md:w-2/3 flex-col">
-                        <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">Chat</h3>
+                        <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">{t("chat")}</h3>
                         <div className='h-126 w-full bg-neutral-100 border flex flex-col justify-between items-center border-neutral-200 rounded-xl p-4'>
                             <div className="w-full flex-1 overflow-y-auto flex flex-col gap-4">
                                 {isEmpty ? (
                                     <div className="flex-1 flex items-center justify-center">
-                                        <div className="w-64 h-10 cursor-default bg-neutral-200 rounded-md text-center text-neutral-400 flex items-center justify-center">
-                                            <p>Send a message to start.</p>
+                                        <div className="w-64 min-h-10 cursor-default bg-neutral-200 rounded-md text-center text-neutral-400 flex items-center justify-center">
+                                            <p>{t("text")}</p>
                                         </div>
                                     </div>
                                 ) : (
@@ -140,7 +143,7 @@ export default function ChatBoard() {
                                     ))
                                 )}
                                 {isLoading && (
-                                    <div className="text-xs text-neutral-400 animate-pulse ml-8">AI is thinking...</div>
+                                    <div className="text-xs text-neutral-400 animate-pulse ml-8">{t("ai")}</div>
                                 )}
                             </div>
 
@@ -148,7 +151,7 @@ export default function ChatBoard() {
                                 <input 
                                     onChange={(e) => setInput(e.target.value)} 
                                     value={input} 
-                                    placeholder="Search for cards..." 
+                                    placeholder={t("message")}
                                     className="w-full h-10 bg-neutral-200 border rounded-sm text-neutral-600 text-sm px-4 border-neutral-200 focus:outline-none focus:ring-1 focus:ring-black"
                                 />
                                 <button 
@@ -163,16 +166,16 @@ export default function ChatBoard() {
                     {
                         selectedCard ? (
                         <div className="flex flex-col w-1/3">
-                        <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">Card</h3>
+                        <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">{t("card")}</h3>
                         <LargeCard
                         cardData={selectedCard}
                         size={isMobile ? "large" : "extraLarge"}
                         />
                     </div>): (
                         <div className="flex flex-col w-1/3">
-                            <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">Card</h3>
+                            <h3 className="text-2xl mb-6 md:text-3xl font-bold text-left">{t("card")}</h3>
                             <div className={`${isMobile ? m.large.container : m.extraLarge.container} text-neutral-400 bg-neutral-200 rounded-4xl px-8 flex justify-center items-center text-center`}>
-                                <p>No card selected.</p>
+                                <p>{t("noCard")}</p>
                             </div>
                         </div>
                     )

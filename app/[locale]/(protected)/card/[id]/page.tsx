@@ -1,12 +1,11 @@
-import { data } from "@/app/constants/cardData";
-
-import ChecklistSection from "@/app/components/sections/ChecklistSection";
+import { getLocalizedCards } from "@/app/hooks/useLocalizedCardsServer";
 import SmallCard from "@/app/components/cards/SmallCard";
 import Link from "next/link";
 import MultipleTags from "@/app/components/ui/MultipleTags";
 import FrontCard from "@/app/components/cards/FrontCard";
 import BackCard from "@/app/components/cards/BackCard";
 import CollectionButton from "@/app/components/ui/CollectionButton";
+import { getTranslations } from 'next-intl/server'
 
 type CardPageProps = {
   id: string
@@ -14,7 +13,8 @@ type CardPageProps = {
 
 const CardPage = async ({params}: {params: CardPageProps}) => {
   const { id } = await params
-
+  const t = await getTranslations("HomePage")
+  const data = await getLocalizedCards()
   const currentCard = data.find(card => card.front[0].cardNum === id)
   const relatedCards = currentCard ? data.filter(rc => 
     rc.relatedCP.includes(currentCard.relatedCP[0]) && rc.id !== currentCard.id
@@ -33,7 +33,7 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
                 currentCard={currentCard}
                 />
                 <section className="max-w-100 md:max-w-full md:w-130 my-4 flex flex-col items-start gap-3">
-                    <h4 className="text-xl font-bold mb-4">Related Cards</h4>
+                    <h4 className="text-xl font-bold mb-4">{t("exploreCards.relatedTitle")}</h4>
                     <div className="flex flex-wrap gap-3 mb-4">
                       {
                       relatedCards.length > 0 ?
@@ -50,7 +50,7 @@ const CardPage = async ({params}: {params: CardPageProps}) => {
                           </div>
                         ))
                       ) : (
-                        <p className="text-neutral-400 text-sm">No card selected.</p>
+                        <p className="text-neutral-400 text-sm">{t("exploreCards.noRelated")}</p>
                       )
                     }
                     </div>

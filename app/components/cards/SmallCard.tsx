@@ -71,8 +71,8 @@ function SmallCard({cardData, state, size}: {cardData: Card, state: boolean, siz
             <div className="flex w-full">
                 <div className={`w-full ${s.size} flex flex-col justify-end`}>
                     {cardData.front.map((dt: any, index: number) => (
-                        <div key={index} className={`flex flex-col font-bold w-full px-2.5 text-white items-start justify-center`}>
-                            <p className={`${size === 'xxs' ? 'text-xl': 'text-2xl'}`}>{dt.cardNum}</p>
+                        <div key={index} className={`h-16 flex flex-col font-bold w-full px-2.5 text-white items-start justify-start`}>
+                            <p className={`${size === 'xxs' ? 'text-xl': 'text-2xl'} self-start`}>{dt.cardNum}</p>
                             <p className={`${size === 'xxs' ? 'text-[8px]' : 'text-xs'} max-w-22 leading-tight`}>{dt.title}</p>
                         </div>
                     ))}

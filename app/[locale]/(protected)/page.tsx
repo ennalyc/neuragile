@@ -1,4 +1,4 @@
-import ExploreCardsSection from "../components/sections/ExploreCardsSection";
+import ExploreCardsSection from "../../components/sections/ExploreCardsSection";
 
 export default function Home() {
   return (

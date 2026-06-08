@@ -2,17 +2,19 @@ import CollectionCard from "../ui/CollectionCard"
 import { getCollections } from "@/app/lib/collections"
 import { logout } from "@/app/actions/logout"
 import { LogOut } from "lucide-react"
+import { getTranslations } from 'next-intl/server'
 
 const CollectionsSection = async () => {
     const collections = await getCollections()
+    const t = await getTranslations("Collections")
     return (
         <div className="w-full">
-            <h4 className="font-semibold text-xl my-4">Collections</h4>
+            <h4 className="font-semibold text-xl my-4">{t("h1")}</h4>
             <div className="w-full flex flex-col h-100 pr-2 overflow-y-scroll gap-y-3">
                 {
                 collections.length === 0 ? (
                    <div className="h-100 w-full bg-neutral-100 rounded-xl flex justify-center items-center border border-dashed border-neutral-300">
-                            <p className="text-neutral-400 text-sm text-center">No collections yet.</p>
+                            <p className="text-neutral-400 text-sm text-center">{t("text")}</p>
 
                     </div>
                 ):(

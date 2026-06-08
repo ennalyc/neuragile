@@ -3,6 +3,7 @@ import Logo from '@/app/assets/neuragileLogo.png'
 import Image from "next/image"
 import Link from "next/link"
 import { UserCircle, MessagesSquare } from "lucide-react"
+import LocaleSwitcher from "../LocaleSwitcher"
 
 const NavBar = () => {
   return (
@@ -21,6 +22,8 @@ const NavBar = () => {
             <Link href={'/profile'}>
               <UserCircle className="text-neutral-400" size={24}/>
             </Link>
+            <LocaleSwitcher/>
+
           </div>
         </div>
 
@@ -35,6 +38,7 @@ const NavBar = () => {
           <Link href={'/profile'}>
             <UserCircle className="text-neutral-400 cursor-pointer hover:text-neutral-500 transition-colors" size={24}/>
           </Link>
+          <LocaleSwitcher/>
         </div>
 
       </div>

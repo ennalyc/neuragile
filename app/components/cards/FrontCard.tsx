@@ -2,26 +2,29 @@ import KanBan from '@/app/assets/agilekanban.png';
 import Speaker from '@/app/assets/communication.png';
 import Building from '@/app/assets/companybuilding.png';
 import { User } from "lucide-react";
-import Image from "next/image";
+import { useTranslations } from 'next-intl';
 import { sizeConfigs } from '@/app/constants/cardSizeConfig';
 
 const FrontCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium' | 'big' | 'large' | 'extraLarge'}) => {
-
+    const t = useTranslations("HomePage")
     const s = sizeConfigs[size];
 
     const cardDetails = [
         {
             type: "Agile Practices",
+            title: t("cardTypes.agile"),
             color: "bg-linear-to-br bg-linear-45 from-[#B3E56D] to-[#386B28]",
             illustration: KanBan, 
         },
         {
             type: "Communication and Social Interaction",
+            title: t("cardTypes.communication"),
             color: "bg-linear-to-br bg-linear-45 from-[#0097FE] to-[#0D5AA8]",
             illustration: Speaker, 
         },
         {
             type: "Leadership and Organization",
+            title: t("cardTypes.leadership"),
             color: "bg-linear-to-br bg-linear-45 from-[#E4509C] to-[#C91572]",
             illustration: Building,
         }
@@ -40,7 +43,7 @@ const FrontCard = ({ cardData, size }: { cardData: any, size: 'small' | 'medium'
         <div className='relative w-full h-full'>
             <div className={`${activeDetail?.color} ${s.container} absolute inset-0 flex flex-col items-center backface-hidden`}>
                 <div className={`px-8 pt-8 mb-2 cursor-default flex flex-row gap-2 text-white items-center justify-end w-full`}>
-                    <p className={`${s.categoryText} font-medium`}>{cardData.category}</p>
+                    <p className={`${s.categoryText} font-medium`}>{activeDetail?.title}</p>
                     <User size={s.iconSize} />
                 </div>
 

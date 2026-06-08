@@ -1,13 +1,17 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { data } from "@/app/constants/cardData"
+import {useTranslations} from 'next-intl';
 import SmallCard from "../cards/SmallCard"
 import LargeCard from "../cards/FlippableCard"
 import FilterSection from "./FilterSection"
 import { sizeConfigs } from "@/app/constants/cardSizeConfig"
+import { useLocalizedCards } from "@/app/hooks/useLocalizedCards";
 
 const ExploreCardsSection = () => {
+  const t = useTranslations('HomePage');
+  const data = useLocalizedCards()
+
   const [activeFilterTagClicked, setActiveFilterTagClicked] = useState<null | string>(null)
   const [activeNdTagClicked, setActiveNdTagClicked] = useState<null | string>(null)
   const [activeCardButton, setActiveCardButton] = useState<null | string>(null)
@@ -41,7 +45,7 @@ const ExploreCardsSection = () => {
        <div className="flex flex-col gap-3 md:justify-between w-full md:gap-0 md:flex-row">
          <div className="flex flex-col md:max-w-2xl gap-8 items-start">
           <div className="flex flex-row w-full md:flex-col md:gap-3">
-            <h3 className='text-2xl md:mb-6 md:text-3xl font-bold text-left w-full'>Explore Cards</h3>
+            <h3 className='text-2xl md:mb-6 md:text-3xl font-bold text-left w-full'>{t("exploreCards.title")}</h3>
             <FilterSection
           activeCard={activeCardButton}
           activeFilter={activeFilterTagClicked}
@@ -61,7 +65,7 @@ const ExploreCardsSection = () => {
               ))}
               {visibleCards.length < 1 && (
                 <div className="h-40 w-full bg-neutral-100 rounded-xl flex justify-center items-center border border-dashed border-neutral-300">
-                  <p className="text-neutral-400">No cards in this category.</p>
+                  <p className="text-neutral-400">{t("empty")}</p>
                 </div>
               )}
             </div>
@@ -79,14 +83,14 @@ const ExploreCardsSection = () => {
                 />
               ) : (
                 <div className={`${isMobile ? m.large.container : m.extraLarge.container} text-neutral-400 bg-neutral-200 rounded-4xl px-8 flex justify-center items-center text-center`}>
-                  <p>Pick a card to see details.</p>
+                  <p>{t("card")}</p>
                 </div>
               )}
             </div>
 
             <section className="flex flex-col items-center lg:items-end">
               <div className={`${isMobile ? 'w-full max-w-sm' : 'w-88'} justify-end`}>
-                <h4 className="text-md font-bold mb-4">Related Cards</h4>
+                <h4 className="text-md font-bold mb-4">{t("exploreCards.relatedTitle")}</h4>
                 <div className="flex flex-row gap-3 pb-4 no-scrollbar">
                   {relatedCards.length > 0 ? (
                     relatedCards.map((rc) => (
@@ -95,7 +99,7 @@ const ExploreCardsSection = () => {
                       </div>
                     ))
                   ) : (
-                    <p className="text-neutral-400 text-sm">No related cards found.</p>
+                    <p className="text-neutral-400 text-sm">{t("exploreCards.noRelated")}</p>
                   )}
                 </div>
               </div>

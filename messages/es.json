@@ -1,0 +1,256 @@
+{
+  "auth": {
+    "buttons": {
+      "signup": "Registrarse",
+      "signin": "Iniciar sesión"
+    },
+    "navbar": "Buscar tarjetas...",
+    "add": "Agregar a una colección", 
+    "modal": {
+      "select": "Seleccionar colección",
+      "noSelect": "Aún no hay colecciones.",
+      "create": "Crear una nueva colección",
+      "button": "Crear"
+    },
+    "form": {
+        "email": {
+            "placeholder": "Escribe tu correo electrónico"
+        },
+        "password": {
+            "placeholder": "Escribe tu contraseña"
+        },
+        "button": "Continuar",
+        "mode": "Actualmente estás"
+    }
+  },
+  "Collections": {
+    "h1": "Colecciones",
+    "text": "Aún no hay colecciones."
+  },
+  "HomePage": {
+    "context": "Contexto",
+    "empty": "No hay tarjetas en esta categoría.",
+    "exploreCards": {
+      "title": "Explorar Tarjetas",
+      "pick": "Selecciona una tarjeta para ver los detalles.",
+      "relatedTitle": "Tarjetas Relacionadas",
+      "noRelated": "No se encontraron tarjetas relacionadas."
+    },
+    "card": "Ninguna tarjeta seleccionada.",
+    "filtering": {
+        "planning": "Planificación",
+        "arrangement": "Organización",
+        "selfregulation": "Autorregulación",
+        "communication": "Comunicación"
+    },
+    "ndTags": {
+        "asd": "TEA",
+        "adhd": "TDAH"
+    },
+    "cardTypes": {
+        "agile": "Prácticas Ágiles",
+        "communication": "Comunicación e Interacción Social",
+        "leadership": "Liderazgo y Organización"
+    },
+    "cards": {
+    "pick": "Selecciona una tarjeta para ver los detalles",
+    "1": {
+      "title": "Pequeños Pasos",
+      "frontText": "Divide las tareas grandes en unidades más pequeñas y concretas, mejorando la claridad, la manejabilidad y la ejecución. Usa un cronograma con plazos para estos hitos menores a fin de apoyar el seguimiento del progreso.",
+      "backText": "Cuando se enfrentan a una gran carga de trabajo o plazos a largo plazo, las personas con Trastorno del Espectro Autista (TEA) pueden experimentar sobrecarga cognitiva, mientras que las personas con TDAH frecuentemente presentan dificultades con la percepción del tiempo y la memoria de trabajo. Esta combinación aumenta la vulnerabilidad a la procrastinación, haciendo necesaria la adopción de estrategias como los entregables intermedios."
+    },
+    "2": {
+      "title": "Divide y Vencerás",
+      "frontText": "Para hacer el Sprint Planning más inclusivo, asegúrate de que las divisiones de tareas sean explícitas y claras para los miembros neurodivergentes del equipo, con criterios bien definidos de lo que se considera una parte completada.",
+      "backText": "Una característica neurodivergente común es la dificultad para relacionar las partes con el todo. Por ejemplo, las personas con TEA tienden a hiperfocalizar en un único detalle dentro de una imagen compleja, mientras que las personas con TDAH pueden tener dificultades para filtrar detalles y percibir todo simultáneamente. Esto crea la necesidad de refuerzos consistentes para establecer conexiones claras entre las subtareas divididas y el objetivo general."
+    },
+    "3": {
+      "title": "Primero el Test",
+      "frontText": "Considera adoptar el Desarrollo Guiado por Pruebas (TDD), ya que requiere escribir pruebas antes de implementar una funcionalidad, imponiendo naturalmente la descomposición de tareas en subtareas más pequeñas y manejables durante el Sprint.",
+      "backText": "Las dificultades para relacionar las partes con el todo pueden dificultar la capacidad de las personas neurodivergentes para descomponer la implementación de una funcionalidad en tareas más pequeñas. Cuando se enfrentan a desafíos de descomposición, pueden desarrollar ansiedad, proporcionar estimaciones imprecisas o posponer el inicio de las tareas."
+    },
+    "4": {
+      "title": "Descarga Mental",
+      "frontText": "Para apoyar la visualización del trabajo futuro, comienza anotando todas las tareas en cualquier orden, ya sea mediante notas escritas, grabaciones de audio o bocetos. Listar todo externamente puede ayudar a reducir la carga cognitiva y asistir con los desafíos de memoria.",
+      "backText": "Las personas neurodivergentes con TEA y TDAH pueden ser más susceptibles a la fatiga cognitiva y a la sobrecarga sensorial, debido a diferencias en el procesamiento de estímulos al realizar actividades que demandan funciones ejecutivas como planificación, estrategia y memoria de trabajo, así como en la forma en que gestionan el estrés."
+    },
+    "5": {
+      "title": "Lote Enfocado",
+      "frontText": "Agrupa tareas similares del Sprint en \"lotes\" para reducir el cambio frecuente de contexto, o permite bloques de tiempo ininterrumpidos en una sola tarea para aprovechar la hiperfocalización en los miembros neurodivergentes del equipo, apoyando la finalización de tareas.",
+      "backText": "Las personas neurodivergentes, especialmente aquellas con TDAH, pueden presentar dificultades con funciones ejecutivas como planificación, organización y memoria de trabajo, así como desafíos en la estimación del tiempo o la finalización de tareas. Las estrategias que ayudan a sostener el foco pueden, por tanto, mejorar la finalización de tareas."
+    },
+    "6": {
+      "title": "Matriz 2x2",
+      "frontText": "Mejora la priorización usando técnicas como la Matriz de Eisenhower o una Matriz 2×2 (ej.: -Urgente/+Urgente e -Importante/+Importante), MoSCoW (Must have, Should have, Could have, Won't have), entre otras.",
+      "backText": "Las personas neurodivergentes, particularmente aquellas con TDAH, pueden enfrentar desafíos en planificación, organización, memoria de trabajo, así como en la iniciación de tareas y la estimación del tiempo. Las herramientas que facilitan la organización y priorización de tareas pueden mejorar la claridad sobre por dónde empezar."
+    },
+    "7": {
+      "title": "Misión Monótona",
+      "frontText": "Durante el Sprint Planning, identifica y destaca explícitamente las tareas tediosas o repetitivas. Algunos miembros neurodivergentes del equipo pueden tener dificultades para completarlas, mientras que otros pueden preferir ejecutarlas.",
+      "backText": "Las personas con TEA pueden mostrar preferencia por las tareas repetitivas debido a la rigidez cognitiva, mientras que aquellas con TDAH frecuentemente presentan niveles basales más bajos de dopamina, lo que puede dificultar la motivación para iniciar o completar tareas monótonas sin recompensa inmediata. Estas condiciones pueden desencadenar procrastinación. La identificación explícita de dichas tareas puede, por tanto, ayudar en su asignación justa."
+    },
+    "8": {
+      "title": "Estimación Realista",
+      "frontText": "Brinda apoyo en la adecuación de estimaciones de entrega para los miembros neurodivergentes del equipo, ya que formular estimaciones realistas puede ser un desafío significativo.",
+      "backText": "Las personas neurodivergentes, especialmente aquellas con TEA, pueden abordar la planificación con una lógica diferente, mientras que aquellas con TDAH frecuentemente tienen dificultades con el control atencional y la percepción del tiempo. En ambos casos, esto puede resultar en dificultades para estimar, monitorear o gestionar la duración de las tareas."
+    },
+    "9": {
+      "title": "Roles Flexibles",
+      "frontText": "Define roles y responsabilidades claramente dentro del equipo, pero permite que los miembros neurodivergentes cambien de rol cuando estas tareas se conviertan en una fuente de estrés.",
+      "backText": "Las personas neurodivergentes, particularmente aquellas con TEA, pueden enfrentar dificultades en comunicación e interacción social, lo que puede generar ansiedad al realizar tareas que requieren estas habilidades, como reuniones presenciales con clientes o el envío de comunicaciones externas."
+    },
+    "10": {
+      "title": "Rutina Estable",
+      "frontText": "Limita los cambios innecesarios y mantén rutinas estables, incluyendo cronogramas de reuniones y ceremonias ágiles. Un Equipo Ágil puede servir como un entorno de seguridad psicológica y estabilidad, mejorando tanto el confort como el rendimiento de los miembros neurodivergentes.",
+      "backText": "Para muchas personas neurodivergentes, especialmente aquellas con TEA debido a la rigidez cognitiva, la rutina, la organización y la previsibilidad contribuyen significativamente al bienestar en las actividades diarias. Una rutina estable puede reducir la ansiedad y el estrés, proporcionar una sensación de seguridad y apoyar la autonomía en la ejecución de tareas."
+    },
+    "11": {
+      "title": "Rápido y Efectivo",
+      "frontText": "Reduce la duración de las sesiones de programación en pareja y de las ceremonias como el Daily y la Sprint Review, con el fin de disminuir la probabilidad de fatiga cognitiva entre los miembros neurodivergentes del equipo.",
+      "backText": "Las ceremonias ágiles frecuentemente implican presentaciones orales y visuales simultáneas, así como un mayor número de participantes (como equipos técnicos y clientes). Las personas con TDAH pueden presentar desafíos en la atención dividida entre múltiples estímulos, mientras que las personas con TEA pueden encontrar dificultades en comunicación e interacción social. Ambas situaciones demandan un alto esfuerzo mental para el control ejecutivo, lo que puede resultar en fatiga cognitiva."
+    },
+    "12": {
+      "title": "Daily Escrito",
+      "frontText": "Posibilita la adaptación de la ceremonia Daily (presencial o en línea) a un formato escrito, utilizando herramientas en línea de gestión de proyectos o comunicación (ej.: un canal #daily en Slack), en el que los miembros del equipo escriben: qué hice, qué estoy haciendo, qué haré y mis bloqueos.",
+      "backText": "En un estudio reciente con personas neurodivergentes, la ceremonia Daily fue frecuentemente reportada como un desencadenante de ansiedad para personas con TEA y/o TDAH. Aunque la rutina puede ser un factor positivo para las personas con TEA, las dificultades de socialización y comunicación prevalecen como factores negativos. Para las personas con TDAH, los desafíos incluyen la gestión del tiempo y el mantenimiento del foco en la producción de tareas debido a la ansiedad elevada antes del Daily, requiriendo alternativas al modelo estándar."
+    },
+    "13": {
+      "title": "Daily 1:1",
+      "frontText": "Ofrece la posibilidad de que los miembros neurodivergentes del equipo no participen en la ceremonia Daily, proporcionando actualizaciones escritas o seguimientos individuales con el liderazgo de forma presencial o en línea a lo largo del día.",
+      "backText": "En un estudio reciente con personas neurodivergentes, la ceremonia Daily fue frecuentemente reportada como un desencadenante de ansiedad para personas con TEA y/o TDAH. Aunque la rutina puede ser un factor positivo para las personas con TEA, las dificultades de socialización y comunicación prevalecen como factores negativos. Para las personas con TDAH, los desafíos incluyen la gestión del tiempo y el mantenimiento del foco en la producción de tareas debido a la ansiedad elevada antes del Daily, requiriendo alternativas al modelo estándar."
+    },
+    "14": {
+      "title": "Foco al Final del Día",
+      "frontText": "Intenta programar las reuniones y ceremonias ágiles para el final de la jornada laboral, en lugar de por la mañana o a primera hora de la tarde, con el objetivo de permitir que los miembros neurodivergentes tengan tiempo después para la reducción del estrés y la autorregulación.",
+      "backText": "Debido al alto esfuerzo mental requerido para mantener el control ejecutivo durante las estresantes ceremonias ágiles (derivado de dificultades en socialización y comunicación para personas con TEA, o de desafíos en concentración, atención dividida y memoria de trabajo para personas con TDAH), las personas neurodivergentes frecuentemente necesitan un momento de descompresión para la reducción del estrés y/o la autorregulación emocional justo después de la reunión."
+    },
+    "15": {
+      "title": "Reunión Informada",
+      "frontText": "Comunica claramente el propósito de una reunión para reducir la ansiedad y ayudar en la planificación de los miembros neurodivergentes del equipo, y proporciona documentos con anticipación para permitir tiempo de procesamiento antes de las discusiones.",
+      "backText": "Las personas neurodivergentes, especialmente aquellas con TEA, frecuentemente necesitan previsibilidad y planificación debido a la rigidez cognitiva. Las personas con TDAH pueden necesitar tiempo adicional para procesar la información y proporcionar respuestas."
+    },
+    "16": {
+      "title": "Batería Recargable",
+      "frontText": "Respeta los diferentes ritmos de trabajo y apoya los ciclos de tareas basados en energía para atender las necesidades de los miembros neurodivergentes del equipo y reducir la fatiga cognitiva.",
+      "backText": "Las personas neurodivergentes frecuentemente experimentan variaciones en los niveles de foco y energía a lo largo del día, influenciadas por factores como la hiperfocalización, la sensibilidad sensorial y la fatiga cognitiva. Exigir productividad constante puede llevar al agotamiento, la disminución del rendimiento y el aumento de la ansiedad. Reconocer que el ritmo de trabajo óptimo puede variar y permitir flexibilidad en los ciclos de tareas puede ayudar a aprovechar el potencial neurodivergente."
+    },
+    "17": {
+      "title": "Parada Obligatoria",
+      "frontText": "Monitorea si los miembros neurodivergentes del equipo están desperdiciando tiempo en tareas innecesarias, haciendo gold plating o sobrecargándose de trabajo, y guíalos sobre cuándo concluir las tareas.",
+      "backText": "Las personas neurodivergentes, particularmente aquellas con TEA, pueden enfrentar dificultades no solo en la iniciación sino también en la finalización de tareas. Esto puede ocurrir debido al apego excesivo a la precisión y la excelencia o a la rigidez cognitiva, que crea comodidad psicológica en permanecer con la tarea actual y evitar nuevos escenarios."
+    },
+    "18": {
+      "title": "Pregunta Amigable",
+      "frontText": "Fomenta y normaliza la búsqueda de ayuda y las solicitudes de aclaración sobre la ejecución de tareas, evitando así ambigüedades y previniendo cuellos de botella o el aislamiento de los miembros neurodivergentes del equipo.",
+      "backText": "Las personas con TEA pueden tener dificultades en comunicación e interpretación de instrucciones, lo que genera inseguridad al iniciar tareas con dudas. Las personas con TDAH pueden presentar baja autoconfianza en entornos que exigen concentración, evitando pedir ayuda por temor al juicio. La falta de un entorno de apoyo y claridad sobre la posibilidad de hacer cualquier tipo de pregunta (incluso las simples) puede resultar en cuellos de botella, aislamiento o errores evitables."
+    },
+    "19": {
+      "title": "Fuera de la Caja",
+      "frontText": "Mantente abierto a reformulaciones de ideas o a reconocer que una tarea puede realizarse de formas no previstas anteriormente, ya que las personas neurodivergentes pueden presentar diferentes enfoques de razonamiento o resolución de problemas.",
+      "backText": "Las personas neurodivergentes tienen cerebros que funcionan de manera diferente a la mayoría, frecuentemente demostrando formas creativas y menos convencionales de pensar e interactuar con el mundo. En el trabajo, estas diferencias pueden manifestarse de diversas formas, como capacidades de resolución de problemas e ideas innovadoras."
+    },
+    "20": {
+      "title": "Dúo Dinámico",
+      "frontText": "Establece una pareja entre un miembro neurodivergente del equipo y un \"buddy\". Los buddies son miembros del mismo Equipo Ágil que apoyan a los colegas neurodivergentes en su compromiso y productividad diarios, por ejemplo, ayudándoles a iniciar tareas, mantener el foco, priorizar el trabajo y gestionar la carga de trabajo.",
+      "backText": "Las personas con TDAH frecuentemente enfrentan dificultades en funciones ejecutivas como organización y memoria de trabajo, así como en mantener la atención o iniciar/completar tareas. Estrategias como el emparejamiento con un colaborador neurotípico pueden ayudar a mantener el compromiso y la productividad. Sin embargo, este enfoque puede tener el efecto contrario para las personas con TEA, que frecuentemente enfrentan desafíos de socialización y pueden preferir el aislamiento al ejecutar tareas."
+    },
+    "21": {
+      "title": "Cristalino",
+      "frontText": "Haz explícitas las normas sociales (ej.: en una guía de incorporación) y verifica regularmente la comprensión para confirmar que la comunicación está siendo recibida según lo previsto, previniendo malentendidos con los miembros neurodivergentes del equipo.",
+      "backText": "Las personas neurodivergentes pueden enfrentar desafíos en la comprensión de reglas sociales o el procesamiento de información e instrucciones (particularmente cuando se proporcionan solo oralmente). Mientras que las personas con TDAH pueden tener dificultades para sostener la atención debido a flujos paralelos de pensamiento, las personas con TEA pueden encontrar dificultades de comunicación, como comprensión deteriorada de gestos y expresiones, o incertidumbre sobre cuándo hablar o interrumpir a otros en las reuniones."
+    },
+    "22": {
+      "title": "Lenguaje Claro",
+      "frontText": "Mantén un lenguaje claro, accesible y sin jergas siempre que sea posible, asegurando que todos los miembros neurodivergentes del equipo puedan comprender las comunicaciones independientemente de su formación o experiencia.",
+      "backText": "Las personas neurodivergentes, particularmente aquellas con TEA, pueden experimentar dificultades en el procesamiento de la comunicación oral o escrita, incluyendo desafíos en la comprensión de ironía, sarcasmo, chistes, jergas y otros aspectos no literales del lenguaje."
+    },
+    "23": {
+      "title": "Refuerzo Escrito",
+      "frontText": "Evita hacer demasiadas preguntas o dar instrucciones muy largas únicamente de forma oral; en su lugar, aumenta el uso de la comunicación escrita como refuerzo (incluso después de las reuniones).",
+      "backText": "Las personas neurodivergentes pueden experimentar dificultades en el procesamiento de información e instrucciones cuando se proporcionan exclusivamente de forma oral, por diferentes razones. Mientras que las personas con TDAH pueden tener dificultades para mantener la atención debido a flujos paralelos de pensamiento, las personas con TEA pueden tener dificultades con la comunicación, incluyendo la comprensión deteriorada de gestos, contacto visual, expresiones y otros aspectos del lenguaje oral o escrito."
+    },
+    "24": {
+      "title": "Audio en Texto",
+      "frontText": "Utiliza herramientas que transcriban mensajes de audio (ej.: Slack, WhatsApp) para mejorar la comunicación con los miembros neurodivergentes del equipo.",
+      "backText": "Las personas neurodivergentes pueden experimentar dificultades en el procesamiento de información e instrucciones cuando se proporcionan exclusivamente de forma oral, por diferentes razones. Mientras que las personas con TDAH pueden tener dificultades para mantener la atención debido a flujos paralelos de pensamiento, las personas con TEA pueden tener dificultades con la comunicación, incluyendo la comprensión deteriorada de gestos, contacto visual, expresiones y otros aspectos del lenguaje oral o escrito."
+    },
+    "25": {
+      "title": "Directo al Grano",
+      "frontText": "Al comunicarte por correo electrónico o mensaje con un miembro neurodivergente del equipo: indica el tema principal en el asunto o al principio para reducir la ansiedad, sé claro y específico (usar verbos de acción puede ayudar), sé breve y/o estructura los mensajes más largos en viñetas, y resalta palabras clave o partes importantes.",
+      "backText": "Para las personas neurodivergentes, especialmente aquellas con TEA, los mensajes escritos (ej.: correo electrónico, Slack, WhatsApp y herramientas similares) pueden apoyar la interacción y la comunicación debido a su naturaleza asíncrona y a la menor necesidad de interacción social en tiempo real, ayudando a mitigar la ansiedad asociada a la comunicación en tiempo real. Sin embargo, al igual que las llamadas telefónicas, recibir mensajes escritos también puede convertirse en un desencadenante de ansiedad para las personas neurodivergentes."
+    },
+    "26": {
+      "title": "Cámara Opcional",
+      "frontText": "Permite que los miembros neurodivergentes del equipo mantengan sus cámaras apagadas durante las reuniones en línea, aliviando así la ansiedad social y reconociendo que apagar la cámara no equivale a desinterés o falta de atención.",
+      "backText": "Las personas neurodivergentes, particularmente aquellas con TEA, pueden enfrentar desafíos con la comunicación y la interacción social, y frecuentemente muestran introversión. Tales dificultades sociales y comunicativas no solo demandan un alto esfuerzo mental para el control funcional durante las ceremonias y reuniones, sino que también pueden requerir estrategias para promover mayor comodidad psicológica durante estas actividades."
+    },
+    "27": {
+      "title": "Puente Social",
+      "frontText": "Los \"buddies\" neurotípicos en pareja también pueden ayudar a los miembros neurodivergentes del equipo con la comunicación y la socialización dentro de la empresa, como en las interacciones con clientes o en el envío de mensajes/correos electrónicos a colegas desconocidos.",
+      "backText": "Al igual que en el caso de las personas con TDAH, el emparejamiento con colegas neurotípicos conocidos puede apoyar a las personas neurodivergentes con TEA en el manejo de los desafíos de interacción social, reduciendo así los desencadenantes de ansiedad relacionados con la comunicación tanto dentro como fuera de la empresa."
+    },
+    "28": {
+      "title": "Sin Presión",
+      "frontText": "Haz invitaciones, pero reconoce que algunos miembros neurodivergentes del equipo pueden preferir no participar en las ceremonias ágiles o en los eventos sociales del equipo/empresa, y aun así deben ser considerados \"miembros activos del equipo\" tanto como aquellos que asisten.",
+      "backText": "En eventos sociales, reuniones o encuentros con mayor número de participantes, las personas con TEA pueden enfrentar desafíos relacionados con la comunicación, la interacción social y la hipersensibilidad sensorial, reduciendo su capacidad de permanecer en entornos sobreestimulantes sin experimentar fatiga cognitiva y ansiedad social."
+    },
+    "29": {
+      "title": "Gestión Empática",
+      "frontText": "Proporciona tratamiento individualizado y adaptaciones claras para los empleados neurodivergentes, asegurando que dichas adaptaciones sean bien comunicadas a la organización, fomentando así la seguridad psicológica.",
+      "backText": "Las personas neurodivergentes tienen necesidades específicas que pueden no ser atendidas por prácticas de gestión estandarizadas, lo que genera sentimientos de inadecuación dentro del equipo. Además, cuando las adaptaciones no son comunicadas por el liderazgo a la organización, puede crear inestabilidad e inseguridad entre los empleados. Un entorno laboral que respeta la individualidad y garantiza la claridad con respecto a las adaptaciones acordadas puede fortalecer la inclusión y el bienestar de las personas neurodivergentes."
+    },
+    "30": {
+      "title": "Orientado a Resultados",
+      "frontText": "Evalúa siempre el desempeño de los empleados neurodivergentes en función de la productividad y la calidad de las entregas, en lugar de la \"velocidad de finalización de tareas\" o la \"presencia/participación aparente\" en las actividades del equipo o la empresa.",
+      "backText": "Las personas neurodivergentes pueden exhibir estilos de trabajo distintos, como pausas frecuentes para la autorregulación (TDAH) o preferencias por interacciones más objetivas y tranquilas (TEA). Evaluar el desempeño en función de la velocidad de producción o de las señales de compromiso (ej.: hablar en las reuniones) puede resultar en evaluaciones injustas y oscurecer las contribuciones reales de los empleados neurodivergentes. Centrarse en la calidad técnica y los resultados, respetando los estilos individuales de trabajo, garantiza una evaluación más justa alineada con la diversidad y la inclusión."
+    },
+    "31": {
+      "title": "Carga Compartida",
+      "frontText": "Identifica las necesidades de los empleados neurodivergentes y asume la responsabilidad de solicitar y negociar adaptaciones con otras unidades organizativas, evitando que toda la carga recaiga sobre los propios individuos.",
+      "backText": "Para que los empleados neurodivergentes accedan a adaptaciones en su entorno de trabajo o modelo laboral, frecuentemente necesitan solicitarlas al departamento de Recursos Humanos de la empresa. Este proceso puede ser especialmente agotador para las personas con dificultades de comunicación (TEA) o con desafíos en la planificación y ejecución de negociaciones (TDAH). Tener que negociar por escrito o de forma presencial puede crear una sobrecarga emocional y puede incluso llevarles a retirar la solicitud o abandonar el trabajo."
+    },
+    "32": {
+      "title": "Asignación Productiva",
+      "frontText": "En los modelos de trabajo basados en proyectos, cuando sea posible, mantén a los empleados neurodivergentes asignados a equipos con colegas conocidos, ya que esto puede apoyar la comunicación, la socialización, el compromiso y la productividad.",
+      "backText": "Para las personas neurodivergentes, los cambios frecuentes en la composición de los equipos pueden presentar desafíos adicionales relacionados con la socialización, la comunicación interpersonal y la previsibilidad de las interacciones. Las personas con TEA, por ejemplo, pueden necesitar más tiempo para establecer seguridad emocional y comprender las nuevas dinámicas del equipo, mientras que aquellas con TDAH pueden beneficiarse de las relaciones ya establecidas para mantener el foco y el compromiso."
+    },
+    "33": {
+      "title": "Espacio Reservado",
+      "frontText": "Ofrece la opción de que los miembros neurodivergentes del equipo reserven una sala o espacio de trabajo separado, con controles ambientales como iluminación, temperatura y ergonomía del mobiliario. Proporcionar auriculares con cancelación de ruido también puede aumentar la sensación de control, comodidad y seguridad física y psicológica.",
+      "backText": "La falta de control en los entornos de trabajo compartidos puede desencadenar episodios de ansiedad, fatiga cognitiva, distracción o malestar en las personas neurodivergentes. Los empleados con TEA pueden experimentar ansiedad social con muchas personas o hipersensibilidad sensorial a ciertas condiciones de iluminación, niveles de ruido y temperatura, mientras que aquellos con TDAH pueden perder fácilmente el foco debido a factores como la interacción social constante."
+    },
+    "34": {
+      "title": "Totalmente Remoto",
+      "frontText": "Siempre que sea posible, permite que los empleados neurodivergentes trabajen completamente de forma remota, o reduzca sustancialmente los requisitos de presencia presencial, fomentando así tanto la seguridad física como la psicológica.",
+      "backText": "El desplazamiento al lugar de trabajo y la permanencia en entornos presenciales pueden ser fuentes significativas de estrés para las personas neurodivergentes, especialmente aquellas con TEA. Desafíos como la hipersensibilidad sensorial, los cambios de rutina, las interacciones sociales inesperadas o las fluctuaciones en la energía mental a lo largo del día pueden comprometer el bienestar y la productividad en entornos presenciales."
+    }
+  },
+  "related": {
+    "title": "Textos Relacionados",
+    "text": "No se encontraron tarjetas relacionadas."
+  }
+  },
+  "CardPage": {
+    "button": "Agregar a una colección",
+    "add": "Crear una nueva selección",
+    "inputField": {
+        "placeholder": "Elige un nombre",
+        "button": "Crear"
+    }
+  },
+  "ProfilePage": {
+    "card": "Aún no hay tarjetas guardadas.",
+    "h1": "Tu Perfil",
+    "saved": "Tarjetas Guardadas",
+    "collections": "Tus Colecciones",
+    "logout": "Cerrar sesión"
+  },
+  "ChatPage": {
+    "chat": "Chat",
+    "card": "Tarjeta",
+    "message": "Envía un mensaje...",
+    "text": "Envía un mensaje para comenzar.",
+    "noCard": "Ninguna tarjeta seleccionada.",
+    "ai": "La IA está pensando..."
+  }
+}

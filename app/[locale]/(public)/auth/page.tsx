@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
-import AuthForm from "../../components/AuthForm"
+import AuthForm from "../../../components/AuthForm"
 import { verifySession } from "@/app/lib/dal"
 
 export default async function AuthPage() {

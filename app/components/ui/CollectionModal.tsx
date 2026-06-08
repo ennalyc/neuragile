@@ -1,6 +1,7 @@
 import { X, Plus, Bookmark } from "lucide-react"
 import { useState, ChangeEvent, FormEvent } from "react"
 import { Collection } from "./CollectionButton"
+import { useTranslations } from "next-intl"
 
 interface Props {
   collections: Collection[]
@@ -25,7 +26,7 @@ export default function CollectionModal({
 }: Props) {
   const [showCreate, setShowCreate] = useState(false)
   const [typing, setTyping] = useState("")
-
+  const t = useTranslations("auth.modal")
   if (!isOpen) return null
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => setTyping(e.target.value)
@@ -48,9 +49,9 @@ export default function CollectionModal({
           <X size={16} />
         </button>
 
-        <h4 className="text-md font-bold mb-4">Select Collection</h4>
+        <h4 className="text-md font-bold mb-4">{t("select")}</h4>
 
-        {collections.length === 0 && <p>No collections yet.</p>}
+        {collections.length === 0 && <p>{t("noSelect")}</p>}
 
         <div className="flex flex-col gap-2 max-h-100 overflow-y-scroll">
             {collections.map((collection) => (
@@ -74,7 +75,7 @@ export default function CollectionModal({
           className="cursor-pointer hover:text-neutral-500 flex flex-row items-center text-sm mt-4 gap-3 text-neutral-400"
         >
           <Plus size={16} />
-          <p>Create a new collection</p>
+          <p>{t("create")}</p>
         </div>
 
         {showCreate && (
@@ -90,7 +91,7 @@ export default function CollectionModal({
               className="bg-black text-white px-3 py-2 rounded hover:bg-neutral-700 flex items-center gap-2"
             >
               <Bookmark size={16} />
-              <span>Create</span>
+              <span>{t("button")}</span>
             </button>
           </form>
         )}
