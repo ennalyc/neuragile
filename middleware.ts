@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const intlMiddleware = createMiddleware(routing);
 
-const locales = ['en', 'pt', 'pt-BR', 'es'];
+const locales = ['en', 'pt','es'];
 
 export default function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;

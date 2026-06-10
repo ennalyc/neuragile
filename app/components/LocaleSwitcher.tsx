@@ -26,7 +26,7 @@ export default function LocaleSwitcher() {
     <div className="relative inline-block">
       <button
         onClick={() => setOpen(o => !o)}
-        className="flex items-center gap-1.5 h-8 px-2.5 text-sm text-neutral-400 font-medium border border-neutral-400 rounded-md bg-transparent hover:bg-accent transition-colors"
+        className="flex cursor-pointer items-center gap-1.5 h-8 px-2.5 text-sm text-neutral-400 font-medium border border-neutral-400 rounded-md bg-transparent hover:bg-accent transition-colors"
       >
         <img
           src={`https://flagcdn.com/w40/${current.country}.png`}
@@ -53,7 +53,7 @@ export default function LocaleSwitcher() {
               <button
                 key={code}
                 onClick={() => switchLocale(code)}
-                className={`flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-accent
+                className={`cursor-pointer flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-accent
                   ${code === currentLocale ? 'bg-accent text-accent-foreground font-medium' : 'text-foreground'}`}
               >
                 <img
