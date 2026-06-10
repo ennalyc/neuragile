@@ -5,6 +5,8 @@
       "signin": "Entrar"
     },
     "navbar": "Pesquise por cards...",
+    "add": "Adicionar a uma coleção", 
+
     "modal": {
       "select": "Selecionar Coleção",
       "noSelect": "Ainda não há coleções.",
